@@ -1,0 +1,118 @@
+.i-back-button {
+    margin-right: -12px;
+}
+
+.i-content {
+    padding-bottom: 400px;
+    padding: 10px;
+}
+
+.i-avatar-chat {
+    margin: 5px;
+}
+
+.i-avatar {
+    height: 40px;
+    width : 40px;
+
+    .i-avatar-profile {
+        height  : 40px;
+        width   : 40px;
+        margin  : auto;
+        position: absolute;
+
+        .i-icon-profile {
+            left    : 0;
+            right   : 0;
+            bottom  : 0;
+            top     : 0;
+            height  : 25px;
+            width   : 25px;
+            margin  : auto;
+            position: absolute;
+
+        }
+
+        .i-avatar-profile-d {
+            left    : 0;
+            right   : 0;
+            bottom  : 0;
+            top     : 0;
+            height  : 25px;
+            width   : 25px;
+            margin  : auto;
+            position: absolute;
+
+        }
+    }
+}
+
+
+.i-message {
+    padding         : 10px;
+    // border-radius: 10px;
+    margin-bottom   : 5px;
+    white-space     : pre-wrap;
+    // border          : 1px solid var(--ion-color-primary);
+    box-shadow: 0px 0px 20px -12px black;
+}
+
+.i-col-receiver-message {
+    background-color: var(--ion-color-light);
+    color           : var(--ion-color-dark);
+    border-radius   : 0px 15px 15px 15px;
+
+    .i-div-time {
+        font-size: 12px;
+        opacity  : 0.5;
+    }
+
+}
+
+.i-col-my-message {
+    background-color: var(--ion-color-light);
+    color           : var(--ion-color-dark);
+    border-radius   : 15px 0px 15px 15px;
+
+
+    .i-div-time {
+        font-size: 12px;
+        opacity  : 0.5;
+    }
+
+}
+
+.i-label-receiver-name {
+    margin-left: 15px;
+    font-size  : 20px;
+    font-weight: 600px;
+}
+
+.i-textarea {
+    width           : 100%;
+    border          : 1px solid var(--ion-color-primary);
+    border-radius   : 10px;
+    background      : #fff;
+    resize          : none;
+    margin-top      : 0px;
+    margin-bottom   : 0px;
+    padding         : 0px;
+    // padding-left : 10px;
+    // padding-right: 10px;
+    color           : black;
+
+}
+
+.i-button-send {
+    background   : var(--ion-color-primary);
+    color        : var(--ion-color-light);
+    border-radius: 48px;
+    height       : 45px;
+    width        : 45px;
+    position     : absolute;
+    right        : 0px;
+    bottom       : 0px;
+
+
+}
+

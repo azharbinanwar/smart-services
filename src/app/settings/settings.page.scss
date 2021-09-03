@@ -1,0 +1,202 @@
+// .i-settings {
+ 
+    .i-card-top {
+        // padding: 10px;
+
+        .i-grid-user-profile {
+            height: 180px;
+            width : 180px;
+            height: 100%;
+
+            .i-avatar-profile {
+                width   : 140px;
+                height  : 140px;
+                position: relative;
+                background: var(--ion-color-light);
+
+
+                .i-img-profile {
+                    width: 140px;
+                    height: 140px;
+                    position: absolute;
+                    top     : 0;
+                    bottom  : 0;
+                    left    : 0;
+                    right   : 0;
+                    margin  : auto;
+
+   
+                }
+                // FOR NULL OR EMPTY IMAGE
+                .i-avatar-profile-d {
+                    width: 140px;
+                    height: 140px;
+                    position: absolute;
+                    top     : 0;
+                    bottom  : 0;
+                    left    : 0;
+                    right   : 0;
+                    margin  : auto;
+                    border: 2px solid var(--ion-color-primary);
+                    background: var(--ion-color-light);
+
+
+                    .i-icon-profile-d {
+                        height  : 110px;
+                        width   : 110px;
+                        position: absolute;
+                        top     : 0;
+                        bottom  : 0;
+                        left    : 0;
+                        right   : 0;
+                        margin  : auto;
+                        fill: var(--ion-color-primary);
+                    }
+
+                }
+
+                .i-spinner {
+                    position: absolute;
+                    top     : 0;
+                    bottom  : 0;
+                    left    : 0;
+                    right   : 0;
+                    margin  : auto;
+                }
+
+            }
+
+
+
+           /*  .i-avatar-add {
+                position: absolute;
+                top     : 5px;
+                right   : 5px;
+                width   : 40px;
+                height  : 40px;
+            } */
+        }
+
+        h3 {
+            padding      : 0px;
+            margin-top   : 10px;
+            margin-bottom: 0px;
+            font-weight  : 600;
+        }
+
+        hr {
+            width          : 90%;
+            margin-left    : auto;
+            margin-right   : auto;
+            // margin-top  : 15px;
+            height         : 1px;
+        }
+
+
+        .i-grid-order {
+            margin-top: 0px;
+            padding   : 0px;
+
+            .i-order-icon {
+                margin : 0px;
+                padding: 0px;
+                height : 24px;
+                width  : 24px;
+            }
+        }
+    }
+    .i-avatar-user {
+
+        position: relative;
+        border: 1px solid;
+
+        .i-icon-profile {
+            left    : 0;
+            right   : 0;
+            bottom  : 0;
+            top     : 0;
+            height  : 40px;
+            width   : 40px;
+            margin  : auto;
+            position: absolute;
+
+        }
+    }
+    .i-label-profile {
+        margin-left: 25px;
+    }
+
+
+    /* .i-card-user-profile {
+        padding: 30px;
+
+        .i-user-profile-img {
+            display     : block;
+            margin-left : auto;
+            margin-right: auto;
+            height      : 80px;
+            width       : 80px;
+        }
+
+        .i-user-profile-label {
+            text-align: center;
+            padding   : auto;
+            margin    : auto;
+
+            h2 {
+                margin-top   : 10px;
+                margin-bottom: 5px;
+                padding      : 0px;
+            }
+
+            ion-label {
+                margin : 0px;
+                padding: 0px;
+            }
+        }
+    } */
+
+    .i-cart-settings {
+        .i-list-settings {
+            .i-item {
+                .i-settings-img {
+                    width : 25px;
+                    height: 25px;
+
+                }
+            }
+        }
+    }
+
+    .i-button {
+        border-radius: 25px;
+        box-shadow   : 0px 0px gray;
+        text-align   : center;
+        margin-top   : 10px;
+        margin-bottom: 10px;
+        height       : 48px;
+        padding-left : 10px;
+        padding-right: 10px;
+        font-weight  : 700;
+
+    }
+
+// }
+
+img {
+    width : 25px;
+    height: 25px;
+} 
+ion-content {
+    --background: var(--ion-color-medium);
+}
+ion-card,
+ion-item {
+    --background: var(--ion-color-light);
+}
+.i-icon {
+    fill    : var(--ion-color-dark);
+}
+p{
+    color: var(--ion-color-dark);;
+}

@@ -1,0 +1,103 @@
+<ion-app>
+  <ion-split-pane contentId="main-content">
+    <ion-menu contentId="main-content" type="overlay">
+      <ion-header>
+        <ion-toolbar color="primary">
+          <ion-title>{{"Menu" | translate}}</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+        <ion-list class="ion-no-padding">
+          <ion-item *ngIf="skeletonVar == 'skeleton'" color="primary" lines="full" color="light">
+            <ion-avatar class="i-avatar">
+              <ion-skeleton-text animated style="width: 100%"></ion-skeleton-text>
+            </ion-avatar>
+            <ion-label class="ion-padding">
+              <p>
+                <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+              </p>
+              <p>
+                <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+              </p>
+            </ion-label>
+          </ion-item>
+
+          <ion-item *ngIf="skeletonVar == 'user'" color="primary" lines="full" (click)="navigateUser()" color="primary">
+            <ion-avatar class="i-avatar">
+              <ion-avatar *ngIf="this.fireAuth.auth.currentUser == null || authService.userProfileImg == ''"
+                class="i-avatar-profile" [style.background-color]="themeService.light">
+                <ion-icon class="i-icon-profile" [style.fill]="themeService.primary" src="assets/icon/person.svg">
+                </ion-icon>
+              </ion-avatar>
+              <img *ngIf="this.fireAuth.auth.currentUser != null && authService.userProfileImg != ''"
+                [src]="authService.userProfileImg" />
+            </ion-avatar>
+            <ion-label class="ion-padding">
+              <h2>{{authService.currentUserName}}</h2>
+              <p>{{authService.currentUserEmail}}</p>
+            </ion-label>
+            <!-- <ion-label *ngIf="skeletonVar == '!user'" class="ion-padding">
+              <h2>{{"Login & Register" | translate}}</h2>
+              <p>{{"Please login or create an account for free" | translate}}</p>
+            </ion-label> -->
+          </ion-item>
+
+          <ion-item *ngIf="skeletonVar == '!user'" color="primary" lines="full" (click)="navigateUser()"
+            color="primary">
+            <ion-avatar class="i-avatar">
+              <ion-avatar *ngIf="this.fireAuth.auth.currentUser == null || authService.userProfileImg == ''"
+                class="i-avatar-profile" [style.background-color]="themeService.light">
+                <ion-icon class="i-icon-profile" [style.fill]="themeService.primary" src="assets/icon/person.svg">
+                </ion-icon>
+              </ion-avatar>
+              <img *ngIf="this.fireAuth.auth.currentUser != null && authService.userProfileImg != ''"
+                [src]="authService.userProfileImg" />
+            </ion-avatar>
+            <!-- <ion-label *ngIf="skeletonVar == 'user'" class="ion-padding">
+              <h2>{{authService.currentUserName}}</h2>
+              <p>{{authService.currentUserEmail}}</p>
+            </ion-label> -->
+            <ion-label class="ion-padding">
+              <h2>{{"Login & Register" | translate}}</h2>
+              <p>{{"Please login or create an account for free" | translate}}</p>
+            </ion-label>
+          </ion-item>
+          <div *ngIf="!appPages">
+            <ion-item *ngFor="let item of [0, 1, 3, 4, 5, 6, 7, 8, 9, 20]" style="margin-bottom: 0px;">
+              <ion-avatar>
+                <ion-skeleton-text animated style="width: 80%; height: 80%;"></ion-skeleton-text>
+              </ion-avatar>
+              <ion-label>
+                <p>
+                  <ion-skeleton-text animated style="width: 50% "></ion-skeleton-text>
+                </p>
+              </ion-label>
+            </ion-item>
+          </div>
+          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages">
+            <ion-item *ngIf="p.title != 'Sign Out'" [routerDirection]="'root'" [routerLink]="[p.url]" color="light">
+              <ion-icon class="i-icon" slot="start" src="{{p.icon}}"></ion-icon>
+              <ion-label>
+                {{ p.title  | translate  }}
+              </ion-label>
+            </ion-item>
+            <ion-item *ngIf="p.title == 'Sign Out' " (click)="signOut()">
+              <ion-icon class="i-icon" slot="start" src="{{p.icon}}"></ion-icon>
+              <ion-label>
+                {{ p.title  | translate  }}
+              </ion-label>
+            </ion-item>
+            <!-- <ion-item *ngIf="p.title == 'Share' " (click)="share()">
+              <ion-icon class="i-icon" slot="start" src="{{p.icon}}"></ion-icon>
+              <ion-label>
+                {{ p.title  | translate  }}
+              </ion-label>
+            </ion-item> -->
+          
+          </ion-menu-toggle>
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+    <ion-router-outlet id="main-content"></ion-router-outlet>
+  </ion-split-pane>
+</ion-app>

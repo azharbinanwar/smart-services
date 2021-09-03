@@ -1,0 +1,147 @@
+.i-main-content {
+    --background: var(--ion-color-medium);
+
+    .i-card-service {
+        .i-img-s{
+            position: relative;
+            left: 0px;
+            right: 0px;
+            margin: auto;
+        }
+        .i-img {
+            height: 60px;
+            width : 60px;
+        }
+
+        p {
+            font-size: 20px;            
+        }
+
+    }
+
+    .i-card-users {
+
+        .i-icon-heart {
+            position: absolute;
+            right   : 27px;
+            top     : 15px;
+            margin  : auto;
+            height  : 24px;
+            width   : 24px;
+            // fill: var(--ion-color-danger);
+        }
+
+        .i-row-user {
+            height      : 100px;
+            padding-left: 10px;
+
+            .i-col-user-avatar {
+                width: 100px;
+
+                .i-avatar {
+
+                    left    : 0;
+                    right   : 0;
+                    bottom  : 0;
+                    top     : 0;
+                    height  : 80px;
+                    width   : 80px;
+                    margin  : auto;
+                    position: absolute;
+
+                    .i-avatar-profile {
+
+                        left      : 0;
+                        right     : 0;
+                        bottom    : 0;
+                        top       : 0;
+                        height    : 80px;
+                        width     : 80px;
+                        margin    : auto;
+                        position  : absolute;
+                        background: var(--ion-color-primary);
+
+                        .i-icon-profile {
+                            left    : 0;
+                            right   : 0;
+                            bottom  : 0;
+                            top     : 0;
+                            height  : 65px;
+                            width   : 65px;
+                            margin  : auto;
+                            position: absolute;
+                            fill    : var(--ion-color-light);
+                        }
+
+                        // .i-avatar-profile-d {
+                        //     left       : 0;
+                        //     right      : 0;
+                        //     bottom     : 0;
+                        //     top        : 0;
+                        //     // height  : 50px;
+                        //     // width   : 60px;
+                        //     margin     : auto;
+                        //     position   : absolute;
+
+                        // }
+                    }
+                }
+
+            }
+
+            .i-col-user-detail {
+                // padding: 15px;
+                
+                color        : var(--ion-color-dark);
+                border-radius: 0px 113px 0px 0px;
+                // background: green;
+                padding      : 20px 35px 15px 15px;
+
+                .i-h2-username {
+                    padding     : 0px;
+                    margin-right: 23px;
+                    margin      : 0px;
+                    font-weight : 400;
+                    font-size   : 20px;
+
+                }
+
+                .i-p-review {
+                    font-size   : 15px;
+                    margin      : 0px;
+                    margin-right: 8px;
+                    opacity     : 0.6;
+                }
+
+                .i-icon-star {
+                    height      : 15px;
+                    width       : 15px;
+                    color       : gold;
+                    margin-right: 2px;
+                }
+
+                .i-p-job {
+                    font-size: 15px;
+                    width    : 50%;
+
+                    margin    : 0px;
+                    margin-top: 6px;
+                    opacity   : 0.6;
+
+                }
+
+                .i-p-date {
+                    font-size     : 15px;
+                    margin        : 0px;
+                    text-align    : right;
+                    margin-top    : 6px;
+                    width         : 50%;
+                    // margin-left: 10px;
+                    opacity       : 0.6;
+                }
+            }
+        }
+    }
+
+
+}

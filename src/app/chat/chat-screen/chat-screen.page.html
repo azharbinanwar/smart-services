@@ -1,0 +1,72 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start" class="i-back-button">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <!--<ion-title>{{receiverData.receiverName}}</ion-title> -->
+    <ion-item color="transparent">
+      <ion-avatar class="i-avatar">
+        <ion-avatar *ngIf="receiverData.receiverProfileURL == ''" class="i-avatar-profile"
+          [style.background-color]="themeService.light">
+          <ion-icon class="i-icon-profile" [style.fill]="themeService.primary" src="assets/icon/person.svg">
+          </ion-icon>
+        </ion-avatar>
+        <img *ngIf="receiverData.receiverProfileURL != ''" [src]="receiverData.receiverProfileURL" />
+      </ion-avatar>
+      <ion-label class="i-label-receiver-name">{{receiverData.receiverName}}</ion-label>
+    </ion-item>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="medium" class="i-content ion-padding">
+  <ion-row *ngFor="let chat of previousChat">
+    <ion-avatar *ngIf="authService.currentUserUID != chat.senderUID" class="i-avatar-chat i-avatar">
+      <ion-avatar *ngIf="receiverData.receiverProfileURL == ''" class="i-avatar-profile"
+        [style.background-color]="themeService.primary">
+        <ion-icon class="i-icon-profile" [style.fill]="themeService.light" src="assets/icon/person.svg">
+        </ion-icon>
+      </ion-avatar>
+      <img *ngIf="receiverData.receiverProfileURL != ''" [src]="receiverData.receiverProfileURL" />
+    </ion-avatar>
+
+    <ion-col class="i-message i-col-my-message" offset="3" size="9"
+      *ngIf="authService.currentUserUID == chat.senderUID">
+      <b>{{authService.currentUserName}}</b><br>
+      <span>{{ chat.message }}</span>
+      <div class="i-div-time ion-text-right">{{dateTime(chat.sentDate) | date: 'yyyy/MM/dd h:mm:ss a'}}</div>
+    </ion-col>
+
+    <ion-col class="i-message i-col-receiver-message" size="9" *ngIf="authService.currentUserUID != chat.senderUID">
+      <b>{{receiverData.receiverName}}</b><br>
+      <span>{{ chat.message }}</span>
+      <div class="i-div-time ion-text-right">{{dateTime(chat.sentDate) | date: 'yyyy/MM/dd h:mm:ss a'}}</div>
+    </ion-col>
+  </ion-row>
+
+</ion-content>
+<!-- <ion-item color="green" class="i-item-message">
+  <ion-textarea class="i-input-message" [(ngModel)]='message' placeholder="Enter your message here"></ion-textarea>
+  <ion-icon class="i-icon-camera" slot="end" name="camera"></ion-icon>
+  <ion-icon class="i-icon-send" slot="end" name="send" *ngIf="message != '' " (click)="sendMessage(message)"></ion-icon>
+</ion-item> -->
+<ion-footer>
+  <ion-toolbar>
+    <ion-row>
+      <ion-col size="10">
+        <!-- autofocus -->
+        <ion-textarea autofocus='tre' #inputMessage class="i-textarea" autosize maxRows='3' [(ngModel)]="message"></ion-textarea>
+      </ion-col>
+      <ion-col size="2">
+        <ion-buttons style="    position: absolute;
+        right: 10px;
+        bottom: 10px;
+        background: green;
+        border-radius: 26px;" class="i-button-send">
+          <ion-button color="primary" expand='block' [disabled]="message === ''" (click)="sendMessage(message)">
+            <ion-icon color="dark" slot="icon-only" name="send"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-footer>

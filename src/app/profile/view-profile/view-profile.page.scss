@@ -1,0 +1,282 @@
+.i-avatar {
+    height  : 40px;
+    width   : 40px;
+    position: relative;
+
+    .i-avatar-profile {
+
+        left    : 0;
+        right   : 0;
+        bottom  : 0;
+        top     : 0;
+        height  : 40px;
+        width   : 40px;
+        margin  : auto;
+        position: absolute;
+
+        .i-icon-profile {
+            left    : 0;
+            right   : 0;
+            bottom  : 0;
+            top     : 0;
+            height  : 30px;
+            width   : 30px;
+            margin  : auto;
+            position: absolute;
+
+        }
+
+        .i-avatar-profile-d {
+            left    : 0;
+            right   : 0;
+            bottom  : 0;
+            top     : 0;
+            height  : 30px;
+            width   : 30px;
+            margin  : auto;
+            position: absolute;
+
+        }
+    }
+}
+
+
+.i-content-main {
+    .i-grid-top {
+        text-align: center;
+        height    : 250px;
+
+        .i-card-top {
+
+            .i-icon-heart {
+                // width   : 24px;
+                // height  : 24px;
+                position: absolute;
+                right   : 10px;
+                top     : 10px;
+                color   : var(--ion-color-danger);
+                
+            }
+
+            .i-grid-user-profile {
+                height: 180px;
+                width : 180px;
+                height: 100%;
+
+                .i-avatar-profile {
+                    width   : 140px;
+                    height  : 140px;
+                    position: relative;
+
+                    // CAMERA ICON 
+                    .i-avatar-click {
+                        height  : 40px;
+                        width   : 40px;
+                        position: absolute;
+                        top     : 5px;
+                        right   : 5px;
+                        border  : 1px solid;
+
+                        .i-icon-avatar-click {
+                            height  : 30px;
+                            width   : 30px;
+                            position: absolute;
+                            top     : 0;
+                            bottom  : 0;
+                            left    : 0;
+                            right   : 0;
+                            margin  : auto;
+
+                        }
+                    }
+
+                    // FOR NULL OR EMPTY IMAGE
+                    .i-avatar-profile-d {
+                        width   : 140px;
+                        height  : 140px;
+                        position: absolute;
+                        top     : 0;
+                        bottom  : 0;
+                        left    : 0;
+                        right   : 0;
+                        margin  : auto;
+                        border  : 2px solid;
+
+                        .i-icon-profile-d {
+                            height  : 110px;
+                            width   : 110px;
+                            position: absolute;
+                            top     : 0;
+                            bottom  : 0;
+                            left    : 0;
+                            right   : 0;
+                            margin  : auto;
+
+                        }
+
+                    }
+
+                    .i-spinner {
+                        position: absolute;
+                        top     : 0;
+                        bottom  : 0;
+                        left    : 0;
+                        right   : 0;
+                        margin  : auto;
+                    }
+
+                }
+
+
+
+                // .i-avatar-add {
+                //     position: absolute;
+                //     top     : 5px;
+                //     right   : 5px;
+                //     width   : 40px;
+                //     height  : 40px;
+                // }
+            }
+
+            h3 {
+                padding      : 0px;
+                margin-top   : 10px;
+                margin-bottom: 0px;
+                font-weight  : 600;
+            }
+
+            hr {
+                width          : 90%;
+                margin-left    : auto;
+                margin-right   : auto;
+                // margin-top  : 15px;
+                height         : 1px;
+            }
+
+
+            .i-grid-order {
+                margin-top: 0px;
+                padding   : 0px;
+
+                .i-order-icon {
+                    margin : 0px;
+                    padding: 0px;
+                    height : 24px;
+                    width  : 24px;
+                }
+
+                // .i-order-heading {
+                //     margin    : 0px;
+                // }
+
+                // .i-order-p {
+                //     margin     : 0px;
+                //     padding    : 1px;
+                //     font-weight: 100;
+                // }
+            }
+        }
+
+        .i-button {
+            border-radius: 25px;
+            box-shadow   : 0px 0px gray;
+            text-align   : center;
+            margin-top   : 10px;
+            margin-bottom: 10px;
+            height       : 48px;
+            padding-left : 8px;
+            padding-right: 8px;
+
+        }
+    }
+
+    .i-item-skill-header {
+        height       : 35px;
+        margin-bottom: 0px;
+
+        // .i-icon-skill-header {
+        // }
+
+    }
+
+    .i-row-skill {
+        margin-left: 15px;
+
+        .i-item-skill {
+            border       : 1px solid var(--ion-color-primary);
+            border-radius: 30px;
+            height       : 35px;
+            margin       : 3px;
+
+            .i-label-skill {
+                margin-right : 0px;
+                margin-top   : 0px;
+                margin-bottom: 15px;
+            }
+        }
+    }
+
+}
+
+.i-icon-review {
+    margin: 2px;
+}
+
+// ion-label, ion-input {
+//     opacity: 1 !important;
+// }
+ion-content {
+    --background: var(--ion-color-medium);
+}
+
+ion-card,
+ion-item {
+    --background: var(--ion-color-light);
+}
+
+.i-icon {
+    fill: var(--ion-color-dark);
+}
+
+// .i-fab {
+//     margin-left: -117px;
+// }
+
+p {
+    color: var(--ion-color-dark);
+}
+
+.i-fab-list {
+    background   : transparent;
+    margin-bottom: -160px;
+    // opacity: 0;
+}
+
+.i-item {
+    margin       : 3px;
+    border       : 1px solid;
+    border-radius: 30px;
+    height       : 38px;
+    // opacity: 0;
+
+    .i-icon-fab {
+        margin-top: 0px;
+        fill      : var(--ion-color-dark);
+        // opacity: 0;
+    }
+
+    .i-label-fab {
+        margin-top: 0px;
+    }
+
+
+}
+
+
+
+
+ion-fab-button {
+    position: absolute;
+    right   : 0px;
+    bottom  : 0px;
+}

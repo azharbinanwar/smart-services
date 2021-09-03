@@ -1,0 +1,94 @@
+{
+
+    "// INTRO PAGE": "INTRO PAGE",
+    "Skip": "Skip",
+    "Welcome to": "Welcome to",
+    "Smart Services": "Smart Services",
+    "Post Your Task": "Post Your Task",
+    "Tell us what you need. It's free to Post": "Tell us what you need. It's free to Post",
+    "Review Offers": "Review Offers",
+    "Receive offers from trusted service providers": "Receive offers from trusted service providers",
+    "Hire the right person": "Hire the right person",
+    "Choose the right person for your task": "Choose the right person for your task",
+
+
+
+    "// Menu": "Menu",
+
+    "All Services": "All Services",
+    "Rate Us": "Rate Us",
+
+
+    "// Home": "// Home",
+
+    "Menu": "Menu",
+    "Home": "Home",
+    "login": "login",
+    "LOGIN": "LOGIN",
+    "email": "email",
+    "password": "password",
+    "Remember me": "Remember me",
+    "Sign up": "Sign up",
+    "Sign Up": "Sign Up",
+    "SIGN UP": "SIGN UP",
+    "Forget password": "Forget password",
+
+
+
+    "// Settings Page": "// Settings Page",
+
+    "Settings": "Settings",
+    "Language": "Language",
+    "Theme": "Theme",
+    "Privacy Policy": "Privacy Policy",
+    "Terms & Conditions": "Terms & Conditions",
+    "Contact Us": "Contact Us",
+    "Share": "Share",
+    "About Us": "About Us",
+    "Sign Out": "Sign Out",
+    "Login and Register": "Login and Register",
+    "Please login or create an account for free": "Please login or create an account for free",
+
+    "// Language Modals": "// Language Modals",
+    "English": "English",
+    "Urdu": "Urdu",
+
+
+    "// Theme Modals": "// Theme Modals",
+    
+    "Default": "Default",
+    "Light": "Light",
+    "Dark": "Dark",
+
+
+    "// Authentication Modals": "// Authentication Modals",
+
+    "Authentication": "Authentication",
+    "Sign In": "Sign In",
+    "name": "name",
+    "confirm password": "confirm password",
+    "phone no": "phone no",
+    "gender": "gender",
+    "base location": "base location",
+
+    "// Profile ": "// Profile",
+ 
+    "Profile": "Profile",
+
+    "// Services ": "// Services",
+    "Software Developer": "Software Developer",
+    "Labour": "Labour",
+    "Car Wash": "Car Wash",
+    "Cleaning": "Cleaning",
+    "Painter": "Painter",
+    "Electrician": "Electrician",
+    "Mechanic": "Mechanic",
+    "Lock Master": "Lock Master",
+    "Gardener": "Gardener",
+    "Plumber": "Plumber",
+    "Carpenter": "Carpenter",
+    "": ""
+
+
+
+}

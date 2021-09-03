@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+<title>ionicons-v5-e</title>
+<g>
+	<path d="M416,64h-16V48c0-8.8-7.2-16-16-16s-16,7.2-16,16v16H144V48c0-8.8-7.2-16-16-16s-16,7.2-16,16v16H96c-35.3,0-64,28.7-64,64
+		v288c0,35.3,28.7,64,64,64h320c35.3,0,64-28.7,64-64V128C480,92.7,451.3,64,416,64z M448,416c0,17.6-14.4,32-32,32H96
+		c-17.6,0-32-14.4-32-32V208c0-16,16-32,32-32h320c16,0,32,16,32,32V416z"/>
+	<circle cx="296" cy="232" r="24"/>
+	<circle cx="376" cy="232" r="24"/>
+	<circle cx="296" cy="312" r="24"/>
+	<circle cx="376" cy="312" r="24"/>
+	<circle cx="136" cy="312" r="24"/>
+	<circle cx="216" cy="312" r="24"/>
+	<circle cx="136" cy="392" r="24"/>
+	<circle cx="216" cy="392" r="24"/>
+	<circle cx="296" cy="392" r="24"/>
+</g>
+</svg>

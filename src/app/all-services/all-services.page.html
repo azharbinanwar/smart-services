@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-menu-button slot="start">
+      <ion-icon name="menu"></ion-icon>
+    </ion-menu-button>
+    <ion-title>{{'All Services' | translate}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="i-main-content" color="medium">
+  <ion-grid *ngIf="!allServicesList" fixed class="i-grid-services">
+    <ion-row class="i-grid-row">
+      <ion-col class="i-grid-col" size="6" *ngFor="let service of [0,1, 2, 3, 4, 5, 6, 7, 8, 9]">
+        <ion-card class="i-card-service ion-text-center" color="light">
+          <ion-item class="ion-text-center" lines="none">
+            <ion-label style="margin: 18px;">
+              <ion-avatar class="i-img-a">
+                <ion-skeleton-text animated style="width: 100%"></ion-skeleton-text>
+              </ion-avatar>
+              <p><ion-skeleton-text animated style="margin-left: 25%; width: 50%"></ion-skeleton-text></p>
+            </ion-label>
+          </ion-item>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid fixed class="i-grid-services">
+    <ion-row class="i-grid-row">
+      <ion-col class="i-grid-col" size="6" *ngFor="let service of allServicesList">
+        <ion-card class="i-card-service ion-text-center" color="light" routerLink="/one-services/{{service.serviceName}}">
+          <ion-item class="ion-text-center" lines="none">
+            <ion-label>
+              <ion-icon  class="i-img" icon="assets/icon/services/{{service.iconName}}.svg"></ion-icon>
+              <p>{{ service.serviceName | translate }} ({{service.joinedUsers.length}})</p>
+            </ion-label>
+          </ion-item>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

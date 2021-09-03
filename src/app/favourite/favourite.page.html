@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Favourite</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="medium" class="i-content-main">
+  <app-general *ngIf="authService.userFavourite.length <= 0"  [data]='favouritePage'></app-general>
+  <ion-card class="i-card-main" *ngFor="let user of authService.currentUserFavouriteList">
+    
+    <ion-item  lines='none'>
+      <ion-icon class="i-icon-heart" (click)="toggleFavorite(user.id)" [src]="authService.userFavourite.indexOf(user.id) == -1? 'assets/icon/heart-empty.svg' : 'assets/icon/heart.svg'"></ion-icon>
+      <ion-avatar class="i-avatar">
+        <ion-avatar *ngIf="user.userProfileImg == '' " class="i-avatar-profile">
+          <ion-icon class="i-icon-profile" src="assets/icon/person.svg"></ion-icon>
+        </ion-avatar>
+        <img *ngIf="user.userProfileImg != ''" [src]="user.userProfileImg" />
+      </ion-avatar>
+
+      <ion-label class="i-label">
+        <h3 class="heading-name">{{user.userName}}</h3>
+        <p class="p-service">{{user.userService}}</p>
+      </ion-label>
+    </ion-item>
+
+  </ion-card>
+
+</ion-content>

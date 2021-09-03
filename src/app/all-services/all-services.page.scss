@@ -1,0 +1,39 @@
+.i-main-content {
+    .i-grid-services {
+        .i-grid-row {
+
+            .i-grid-col {
+                padding: 0px;
+                margin : 0px;
+
+                .i-card-service {
+                    margin : 5px;
+                    padding: 0px;
+
+
+                    .i-img-a {
+                        position: relative;
+                        left   : 0px;
+                        right  : 0px;
+                        height    : 66px;
+                        width     : 66px;
+                        margin : auto;
+                    }
+
+                    .i-img {
+                        margin-top: 15px;
+                        height    : 60px;
+                        width     : 60px;
+                    }
+
+                    .i-label {
+                        margin-top   : 15px;
+                        margin-bottom: 15px;
+                    }
+
+                }
+            }
+        }
+
+    }
+}

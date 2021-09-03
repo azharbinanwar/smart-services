@@ -1,0 +1,121 @@
+<ion-header>
+  <ion-toolbar color="primary"> 
+
+    <ion-menu-button slot="start">
+      <ion-icon name="menu"></ion-icon>
+    </ion-menu-button>
+    <ion-title>{{'Settings' | translate}} </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="i-settings" class="ion-no-padding">
+
+  <!-- <ion-card class="i-card">
+   
+    <ion-item lines="none" >
+      <ion-avatar *ngIf="authService.userProfileImg == null || authService.userProfileImg == ''"
+      class="i-avatar-user-d" [style.background-color]="themeService.light">
+        <ion-icon class="i-icon-profile-d" [style.fill]="themeService.primary" src="assets/icon/person.svg"></ion-icon>
+      </ion-avatar>
+
+      <ion-avatar class="i-avatar-user"  *ngIf="this.fireAuth.auth.currentUser != null && authService.userProfileImg != '' ">
+        <img class="i-icon-profile" src={{authService.userProfileImg}} />
+      </ion-avatar>
+      <ion-label class="i-label-profile">
+        <h2>{{authService.currentUserName}}</h2>
+        <p>{{authService.currentUserEmail}}</p>
+      </ion-label>
+    </ion-item>
+  </ion-card> -->
+
+  <!-- <ion-card class="i-card-user-profile" >
+    <ion-item>
+      <ion-label>
+        <ion-avatar>
+          <img src="assets/icon/person.svg">
+        </ion-avatar>
+      <h1>User Name</h1>
+      <p>User mail</p>
+      </ion-label>
+    </ion-item>
+  </ion-card> -->
+  <!-- <ion-card class="i-card-user-profile" >
+    <ion-grid fixed (click)="openLoginPage()">
+      <ion-row >
+        <ion-col class="ion-no-padding">
+          <ion-avatar class="i-user-profile-img">
+            <img src="assets/icon/favicon.png">
+          </ion-avatar>
+        </ion-col>
+      </ion-row>
+      <ion-row class="i-user-profile-label ion-no-padding">
+        <ion-col *ngIf="fireAuth.auth.currentUser == null" class="ion-no-padding" size="12">
+          <ion-item color="light" lines='none'>
+            <ion-label class="ion-text-center">
+              <h1>{{'Login & Register'  | translate}}</h1>
+              <ion-text>
+                <h1>Awesome text</h1>
+              </ion-text> {{'Please login or create an account for free' | translate}}
+            </ion-label>
+          </ion-item>
+        </ion-col>
+        <ion-col *ngIf="fireAuth.auth.currentUser != null" class="ion-no-padding" size="12">
+          <ion-item color="light" lines='none'>
+            <ion-label class="ion-text-center">
+              <ion-text style="font-size: 25px;">{{authService.currentUserName}}</ion-text>
+              <ion-label>{{authService.currentUserEmail}}</ion-label>
+            </ion-label>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card> -->
+
+
+  <ion-card  class="i-card-top ion-padding ion-justify-content-center" (click)="navigateUser()">
+    <ion-grid fixed class="i-grid-user-profile">
+      <ion-row class="ion-justify-content-center ion-align-items-center" style="height: 100%">
+        <ion-avatar class="i-avatar-profile">
+          <ion-spinner class="i-spinner" color="primary" name="lines"></ion-spinner>
+          <!-- <ion-icon class="i-icon-profile" src="assets/icon/person.svg"></ion-icon> -->
+          <ion-avatar *ngIf="this.fireAuth.auth.currentUser == null ||
+          authService.userProfileImg == ''" class="i-avatar-profile-d">
+            <ion-icon class="i-icon-profile-d"
+              src="assets/icon/person.svg">
+            </ion-icon>
+          </ion-avatar>
+          <img *ngIf="this.fireAuth.auth.currentUser != null &&
+          authService.userProfileImg != ''" class="i-img-profile" src="{{ authService.userProfileImg }}" />
+        </ion-avatar>
+      </ion-row>
+    </ion-grid>
+    <ion-item class="ion-text-center ion-no-padding" lines="none">
+      <ion-label *ngIf="this.fireAuth.auth.currentUser == null" style="font-size: 30px;">
+        <h1>{{'Login & Register' | translate}}</h1>
+        <p>{{'Please login or create an account for free' | translate}}</p>
+      </ion-label>
+      <ion-label *ngIf="this.fireAuth.auth.currentUser != null" style="font-size: 30px;">
+        <h1>{{authService.currentUserName}}</h1>
+        <p>{{authService.currentUserEmail}}</p>
+      </ion-label>
+    </ion-item>
+  </ion-card>
+
+
+
+  <ion-card class="i-cart-settings ion-padding" >
+    <ion-list *ngFor="let settingItem of settingsConfigService.settingItemsList" lines="full"
+      class="i-list-settings ion-no-padding">
+      <ion-item class="i-item" (click)="openSettingItem(settingItem.name)" >
+        <ion-label>{{ settingItem.name | translate}}</ion-label>
+        <ion-icon class="i-icon" slot="start" src={{settingItem.icon}}></ion-icon>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+
+  <ion-button *ngIf="fireAuth.auth.currentUser != null" (click)="openSettingItem('Sign Out')" class="i-button"
+    expand="block">
+    <ion-label>{{"Sign Out" | translate}}</ion-label>
+    <!-- <ion-spinner color="danger" name="lines-small"></ion-spinner> -->
+  </ion-button>
+  
+</ion-content>
