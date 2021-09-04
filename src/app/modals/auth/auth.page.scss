@@ -1,0 +1,113 @@
+.auth-content {
+  .auth-content-tabs {
+
+    .auth-form ion-grid,
+    .auth-form ion-row {
+      // height          : 100%;
+      justify-content    : center;
+    }
+
+    .i-gird-all {
+
+      .login-content-img {
+        height: 75px;
+        width : 75px;
+      }
+
+      .i-grid {
+
+
+        .i-input {
+          border-radius: 25px;
+          margin-left  : 5px;
+          margin-right : 5px;
+          margin-top   : 10px;
+          margin-bottom: 10px;
+          height       : 48px;
+          box-shadow   : 0px 1px 7px -4px black;
+        }
+
+        .i-button {
+          border-radius: 25px;
+          text-align   : center;
+          margin-top   : 10px;
+          margin-bottom: 10px;
+          height       : 48px;
+        }
+
+        .i-remember-checkbox {
+          margin       : 15px;
+          border-radius: 25px;
+          height       : 45px;
+
+          .i-checkbox {
+            margin-top   : auto;
+            margin-bottom: auto;
+          }
+        }
+
+        .i-other-sign-up-grid {
+          display        : flex;
+          justify-content: center;
+          margin-top     : 10px;
+          margin-left    : auto;
+          margin-right   : auto;
+
+          .i-other-sign-up-fab {
+            margin-left  : 10px;
+            margin-right : 10px;
+            margin-top   : 5px;
+            margin-bottom: 5px;
+
+            .i-other-sign-up-fab-img {
+              height       : 24px;
+              width        : 24px;
+              margin       : auto;
+              align-content: center;
+            }
+          }
+        }
+
+      }
+
+    }
+  }
+}
+
+.error-message
+{
+  color: red;
+  
+  font-size: 14px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+
+h3,
+h5,
+p {
+  text-align   : right;
+  font-size    : 12px;
+  padding-right: 25px;
+}
+
+img {
+
+  display     : block;
+  margin-left : auto;
+  margin-right: auto;
+  width       : 100px;
+  height      : 100px;
+}
+
+ion-icon {
+  margin-right: 10px;
+}
+
+ion-item-divider {
+  margin-top: 0px;
+  min-height: .5px !important;
+  max-height: 1px;
+  box-shadow: 1px 1px gray;
+}

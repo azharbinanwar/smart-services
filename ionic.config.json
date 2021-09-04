@@ -1,0 +1,8 @@
+{
+  "name": "Smart Services",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}

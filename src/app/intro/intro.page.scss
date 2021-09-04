@@ -1,0 +1,37 @@
+.i-welcome {
+    margin-top: 20px;
+}
+
+.i-grid {
+    position: absolute;
+    height: 70%;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    margin: auto;
+    left: 0px;
+
+    .i-slides {
+        height: 100%;
+        padding: 15px;
+        img {
+            width: 80%;
+            max-width: 300px;
+            max-height: 60%;
+        }
+    }
+}
+
+.i-tx {
+    text-align: center;
+    color: var(--ion-color-dark);
+}
+
+.i-button-skip {
+    position: absolute;
+    bottom: 26px;
+    right: 0px;
+    left: 0px;
+    margin: auto;
+    width: 100px;
+}

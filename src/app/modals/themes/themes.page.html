@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-button (click)="dismissCtrl()">
+        <ion-icon slot="icon-only" name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>themes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="medium">
+  <ion-card color="light" class="ion-padding">
+
+    <ion-list *ngFor="let theme of themeList" lines='full' class="ion-no-padding">
+      <ion-item (click)="changeTheme(theme.name)" color="light" class="ion-no-padding">
+        <ion-icon [style.fill]="theme.color" slot="start" src="assets/icon/theme.svg"></ion-icon>
+        <ion-label>{{theme.name}}</ion-label>
+        <ion-checkbox slot="end" [checked]="theme.name === themeService.appTheme"></ion-checkbox>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+</ion-content>

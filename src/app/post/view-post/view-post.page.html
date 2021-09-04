@@ -1,0 +1,91 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>{{title}}</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card class="ion-padding">
+    <ion-item lines="full">
+      <ion-icon class="i-icon" slot="start" src="assets/icon/label.svg"></ion-icon>
+      <ion-label>
+        <p style="font-size: 12px;">Title</p>
+        <h3>{{title}}</h3>
+      </ion-label>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-icon class="i-icon" slot="start" src="assets/icon/label.svg"></ion-icon>
+      <ion-label>
+        <p style="font-size: 12px;">Sub Category</p>
+        <h3>{{subCategory}}</h3>
+      </ion-label>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-icon class="i-icon" slot="start" src="assets/icon/time.svg"></ion-icon>
+      <ion-label>
+        <p style="font-size: 12px;">Job Time</p>
+        <h3>{{jobTime}}</h3>
+      </ion-label>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-icon class="i-icon" slot="start" src="assets/icon/time.svg"></ion-icon>
+      <ion-label>
+        <p style="font-size: 12px;">Date Created</p>
+        <h3>{{dateCreated | date: 'd MMM yyyy h:mm:ss a'}}</h3>
+      </ion-label>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-icon class="i-icon" slot="start" src="assets/icon/services.svg"></ion-icon>
+      <ion-label>
+        <p style="font-size: 12px;">Service Name</p>
+        <h3>{{serviceName}}</h3>
+      </ion-label>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-icon class="i-icon" slot="start" src="assets/icon/price.svg"></ion-icon>
+      <ion-label>
+        <p style="font-size: 12px;">Budget</p>
+        <h3>{{budget}}</h3>
+      </ion-label>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-icon class="i-icon" slot="start" src="assets/icon/label.svg"></ion-icon>
+      <div>
+        <p style="font-size: 12px;">Description</p>
+        <h3>{{description}}</h3>
+      </div>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-icon class="i-icon" slot="start" src="assets/icon/label.svg"></ion-icon>
+      <div>
+        <p style="font-size: 12px;">Bids</p>
+        <h3>{{employeeRequests.length}}</h3>
+      </div>
+    </ion-item>
+  </ion-card>
+  <ion-button *ngIf="fireAuth.auth.currentUser != null && authService.currentUserUID != postUserUID"
+    [disabled]='bidSent' (click)="sendRequest()" class="i-button" expand="block">
+    <ion-text *ngIf="bidSent == false">
+      Send Request
+    </ion-text>
+    <ion-text *ngIf="bidSent == true">
+      Request Sent
+    </ion-text>
+  </ion-button>
+  <!-- (click)="veiwAllPost(postID)" -->
+  <ion-button [disabled]='employeeRequests.length <= 0' class="i-button" expand="block" *ngIf="authService.currentUserUID == postUserUID" routerLink='/all-requests/{{postID}}'>
+    <ion-text *ngIf="employeeRequests.length <= 0">
+      No Request to Show
+    </ion-text>
+    <ion-text *ngIf="employeeRequests.length > 0">
+      View Request
+    </ion-text>
+  </ion-button>
+  <!-- <ion-button *ngIf="(authService.currentUserUID != postUserUID && fireAuth.auth.currentUser != null) && (bidSent == true)"
+    (click)="sendRequest()" class="i-button" expand="block">
+    Request Sent
+  </ion-button> -->
+</ion-content>

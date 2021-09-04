@@ -1,0 +1,21 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>intro</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content color="medium">
+  <p class="i-tx i-welcome">{{ 'Welcome to' | translate}} <strong>{{'Smart Service' | translate}}</strong></p>
+  <div class="i-grid">
+    <ion-slides pager="true" class="i-slides" style="height: 100%;">
+      <ion-slide *ngFor="let slide of introList">
+        <ion-col size="12">
+          <img src={{slide.image}}>
+          <h1 class="i-tx">{{ slide.heading | translate }}</h1>
+          <p class="i-tx">{{ slide.sub_heading | translate }}</p>
+        </ion-col>
+      </ion-slide>
+    </ion-slides>
+  </div>
+  <ion-button class="i-button-skip" color="primary" routerLink='/home'>{{'Skip' | translate}}</ion-button>
+</ion-content>

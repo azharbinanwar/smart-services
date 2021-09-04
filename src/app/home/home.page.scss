@@ -1,0 +1,101 @@
+.i-row {
+    padding-left  : 2px;
+    padding-right : 2px;
+    padding-bottom: 4px;
+
+    .i-col {
+        border-radius: 16px;
+        padding-top  : 8px;
+        border       : 1px solid var(--ion-color-primary);
+
+        .i-avatar {
+            height  : 60px;
+            width   : 100%;
+            position: relative;
+
+            .i-img {
+                height: 60px;
+                width : 60px;
+            }
+
+            .i-avatar-profile {
+
+                height  : 60px;
+                width   : 100%;
+                margin  : auto;
+                position: absolute;
+
+
+                .i-icon-profile {
+                    height       : 45px;
+                    width        : 45px;
+                    margin       : auto;
+                    background   : var(--ion-color-primary);
+                    padding      : 7px;
+                    fill         : var(--ion-color-light);
+                    border-radius: 51px;
+                }
+
+            }
+        }
+
+        .i-p-userName {
+            margin-top   : 8px;
+            font-size    : 12px;
+            margin-bottom: 0px;
+            color: var(--ion-color-dark);
+        }
+
+        .i-p-userService {
+            margin-top: 0px;
+            font-size : 10px;
+        }
+
+    }
+
+}
+
+// .i-list-post {
+//     background: var(--ion-color-medium);
+    .i-card-post {
+        padding: 5px;
+
+        .i-label-detail {
+            margin: 0px;
+
+            .i-heading-title {
+                font-weight: 700;
+                font-size  : 18px;
+                font-weight: 700;
+                color      : var(--ion-color-dark);
+                }
+                p {
+                    color      : var(--ion-color-dark);
+                    opacity: 0.5;
+                }
+        }
+
+
+        .i-heading-price {
+            font-weight: 700;
+            color      : var(--ion-color-dark);
+            font-size  : 18px;
+            text-align : right;
+        }
+
+        .i-p-time {
+            text-align: right;
+            color     : var(--ion-color-dark);
+            opacity: .5;
+        }
+
+    }
+// }
+
+.i-text {
+    color: var(--ion-color-primary);
+    // opacity: .5;
+}
+.i-icon{
+    color: var(--ion-color-dark);
+}

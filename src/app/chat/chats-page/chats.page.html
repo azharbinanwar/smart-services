@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar color="primary"> 
+    <ion-menu-button slot="start">
+      <ion-icon name="menu"></ion-icon>
+    </ion-menu-button>
+    <ion-title>Messaging</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="medium">
+  <!-- <app-general *ngIf="authService.userChats.length <= 0"  [data]='chatsPage'></app-general> -->
+    <ion-card *ngFor="let user of usersInChat" color="light" (click)="navigateToChat(user.id, user.userProfileImg, user.userName)">
+      <ion-item  color="light" lines="none">
+        <ion-avatar class="i-avatar-chat i-avatar">
+          <ion-avatar *ngIf="user.userProfileImg == ''"
+            class="i-avatar-profile">
+            <ion-icon class="i-icon-profile" src="assets/icon/person.svg">
+            </ion-icon>
+          </ion-avatar>
+          <img *ngIf="user.userProfileImg != ''"
+            [src]="user.userProfileImg" />
+        </ion-avatar>
+            <ion-label class="i-label-name">{{user.userName}}</ion-label>
+      </ion-item>
+    </ion-card>
+
+</ion-content>

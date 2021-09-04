@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Contact Us</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="medium">
+  <ion-card class="ion-padding">
+    <h1 class="i-tx ion-text-center">WE’D LOVE TO HELP YOU IN EMAIL OR VIA CALL!</h1>
+    <p class="i-tx"><strong>Smart Services</strong> is helping thousands of people to do business.
+      Our customer support team is available from 09:00 am to 05:00 pm (monday to friday),
+      we are passionate about our community platform as well as our members and it shows
+      in the quality of service that we provide.
+      We are always happy to help you in finding the best solutions for all your needs.
+      If you have any question about our platform or services contact our support team.</p>
+    <p class="i-tx ion-text-center"><strong> Email us using the contact form or call us.</strong></p>
+
+
+    <ion-list>
+      <ion-item (click)="contactUs()">
+        <ion-label>+923164944177</ion-label>
+        <ion-icon slot="end" name="call-outline"></ion-icon>
+      </ion-item>
+
+      <a style="text-decoration: none;" href="https://api.whatsapp.com/send?phone=923164944177">
+        <ion-item>
+          <ion-label color="dark">+923164944177</ion-label>
+          <ion-icon slot="end" name="logo-whatsapp"></ion-icon>
+        </ion-item>
+      </a>
+
+      <a style="text-decoration: none;" href="mailto:azharalikasuri@gmail.com">
+        <ion-item>
+          <ion-label color="dark">azharalikasuri@gmail.com</ion-label>
+          <ion-icon slot="end" name="mail-outline"></ion-icon>
+        </ion-item>
+      </a>
+    </ion-list>
+  </ion-card>
+
+</ion-content>

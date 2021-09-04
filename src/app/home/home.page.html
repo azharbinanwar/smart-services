@@ -1,0 +1,138 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      {{ 'Home' | translate }}
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="medium">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle color="dark">{{'Favourite List' | translate}}</ion-card-subtitle>
+    </ion-card-header>
+    <!-- *ngIf="toHideBool == false" [options]="sliderConfig" -->
+    <!-- SKELETON -->
+    <ion-slides *ngIf="toHideBool == false" [options]="sliderConfig">
+      <ion-slide *ngFor="let user of [0, 1, 2]">
+        <ion-grid fixed>
+          <ion-row class="i-row">
+            <ion-col class="i-col">
+              <ion-avatar class="i-avatar">
+                <ion-skeleton-text class="i-avatar-profile" animated style="    height: 65px;
+                width: 65px;
+                margin: auto;
+                position: relative;">
+                </ion-skeleton-text>
+              </ion-avatar>
+              <p class="i-p-userName">
+                <ion-skeleton-text animated style="width: 100%"></ion-skeleton-text>
+              </p>
+              <p class="i-p-userService">
+                <ion-skeleton-text animated style="width: 100%"></ion-skeleton-text>
+              </p>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-slide>
+    </ion-slides>
+    <div *ngIf="toHideBool == true || this.fireAuth.auth.currentUser != null">
+      <app-general *ngIf="!authService.currentUserFavouriteList" [data]='favouriteList'></app-general>
+      <ion-slides *ngIf="authService.currentUserFavouriteList" [options]="sliderConfig">
+        <ion-slide *ngFor="let user  of authService.currentUserFavouriteList"
+          (click)="favouriteCardPopover($event, user.userUID, user.userName, user.userProfileImg)">
+          <ion-grid fixed>
+            <ion-row class="i-row">
+              <ion-col class="i-col">
+                <ion-avatar class="i-avatar">
+                  <ion-avatar *ngIf="user.userProfileImg == ''" class="i-avatar-profile">
+                    <ion-icon class="i-icon-profile" src="assets/icon/person.svg"></ion-icon>
+                  </ion-avatar>
+                  <img class="i-img" *ngIf="user.userProfileImg != ''" [src]="user.userProfileImg" />
+                </ion-avatar>
+                <p class="i-p-userName">{{ user.userName }}</p>
+                <p class="i-p-userService i-text">{{ user.userService }}</p>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-slide>
+      </ion-slides>
+    </div>
+  </ion-card>
+  <ion-card>
+    <ion-item lines="none">
+      <ion-label>{{'Posts' | translate}}</ion-label>
+      <ion-icon class="i-icon" slot="start" src="assets/icon/posts.svg"></ion-icon>
+    </ion-item>
+  </ion-card>
+  <!-- SKELETON -->
+  <div *ngIf="!allPosts">
+    <ion-card class="i-card-post" *ngFor="let post of [0, 1, 2, 3, 4]">
+      <ion-row>
+        <ion-col size='8.5'>
+          <ion-item class="ion-no-padding" lines='none'>
+            <ion-label class="i-label-detail">
+              <h3>
+                <ion-skeleton-text animated style="width: 100%"></ion-skeleton-text>
+              </h3>
+              <p>
+                <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+              </p>
+              <p>
+                <ion-skeleton-text animated style="width: 70%"></ion-skeleton-text>
+              </p>
+            </ion-label>
+          </ion-item>
+        </ion-col>
+        <ion-col size="3.5">
+          <ion-item class="ion-no-padding" lines='none' style=" 
+          --padding-end: 0px;
+          --inner-padding-end: 0px;">
+            <ion-label class="i-label-detail ion-no-padding">
+              <h3 class="i-heading-price">
+                <ion-skeleton-text animated style="width: 100%"></ion-skeleton-text>
+              </h3>
+              <p class="i-text i-p-time">
+                <ion-skeleton-text animated style="margin-left: 20%; width: 80%"></ion-skeleton-text>
+              </p>
+              <p class="i-text i-p-time">
+                <ion-skeleton-text animated style="margin-left: 10%; width: 90%"></ion-skeleton-text>
+              </p>
+            </ion-label>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+  </div>
+  <ion-card class="i-card-post" *ngFor="let post of allPosts" routerLink='/view-post/{{post.id}}'>
+  <!-- <ion-card class="i-card-post" *ngFor="let post of allPosts" routerLink='/all-requests/'> -->
+    <ion-row>
+      <ion-col size='8.5'>
+        <div>
+          <ion-label class="i-label-detail">
+            <h3 class="i-heading-title">{{post.title}}</h3>
+            <p class="i-text">{{post.subCategory}}</p>
+            <p class="i-text">Service: {{post.serviceName}}</p>
+          </ion-label>
+        </div>
+      </ion-col>
+      <ion-col size='3.5'>
+        <div>
+          <ion-label>
+            <h3 class="i-heading-price">{{post.budget}} Rs</h3>
+            <p class="i-text i-p-time">{{post.jobTime}}</p>
+            <p class="i-text i-p-time">{{'bids' | translate}} ({{post.employeeBids.length}})</p>
+          </ion-label>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+</ion-content>
+<ion-fab (click)="postAJob()" vertical="bottom" horizontal="end" slot="fixed">
+  <ion-fab-button>
+    <ion-icon src="assets/icon/edit.svg"></ion-icon>
+  </ion-fab-button>
+</ion-fab>

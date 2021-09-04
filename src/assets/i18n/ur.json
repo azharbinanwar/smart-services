@@ -1,0 +1,105 @@
+{
+    
+    "// INTRO PAGE": "INTRO PAGE",
+    "Skip": "چھوڑ دیں",
+    "Welcome to": "میں خوش آمدید",
+    "Smart Services": "اسمارٹ سروسز",
+    "Post Your Task": "اپنا ٹاسک پوسٹ کریں",
+    "Tell us what you need. It's free to Post": "آپ کی ضرورت ہمیں بتائیں۔ یہ پوسٹ کرنا مفت ہے۔",
+    "Review Offers": "پیش کشوں کا جائزہ لیں",
+    "Receive offers from trusted service providers": "قابل بھروسہ سروس فراہم کرنے والوں سے آفرز وصول کریں",
+    "Hire the right person": "صحیح شخص کی خدمات حاصل کریں",
+    "Choose the right person for your task": "اپنے کام کے لئے صحیح شخص کا انتخاب کریں",
+
+
+    "// Menu": "Menu",
+
+    "Menu": "مینو",
+    "All Services": "تمام خدمات",
+    "Rate Us": "ہمیں شرح دیں",
+
+
+    "// Home": "// Home",
+
+    "Home": "ہوم",
+    "Login": "لاگ ان",
+    "LOGIN": "لاگ ان",
+    "email": "ای میل",
+    "password": "پاس ورڈ",
+    "Remember me": "یاد رکھیں",
+    "Sign up": "سان اپ",
+    "Sign Up": "سان اپ",
+    "SIGN UP": "سان اب",
+    "Forget password": "پاس ورڈ بھول جانا",
+    "bids": "بولی",
+    "Favourite List": "پسندیدہ فہرست",
+    "Posts": "پوسٹس",
+    "Nothing yet added to your favourite": "آپ کے پسندیدہ میں ابھی تک کچھ شامل نہیں کیا گیا",
+    
+
+    "// Settings Page": "// Settings Page",
+
+    "Language": "زبان",
+    "Theme": "تھیم",
+    "Settings": "ترتیبات",
+    "Privacy Policy": "رازداری کی پالیسی",
+    "Terms and Conditions": "شرائط و ضوابط",
+    "Contact Us": "ہم سے رابطہ کریں",
+    "Share": "بانٹیں",
+    "About Us": "ہمارے بارے میں",
+    "Sign Out": "باہر جائیں",
+    "Login & Register": "لاگ ان اور رجسٹر",
+    "Please login or create an account for free": "براہ کرم لاگ ان کریں یا مفت میں ایک اکاؤنٹ بنائیں",
+
+    "// Language Modals": "// Language Modals",
+
+    "English": "انگش",
+    "Urdu": "اردو",
+
+
+    "// Theme Modals": "// Theme Modals",
+    
+    "Default": "پہلے سے طے شدہ",
+    "Light": "روشنی",
+    "Dark": "سیاہ",
+
+
+    "// Authentication Modals": "// Authentication Modals",
+ 
+    "Authentication": "توثیق",
+    "Sign In": "سان ان",
+    "name": "نام",
+    "confirm password": "پاس ورڈ کی تصدیق کریں",
+    "phone no": "فون نمبر",
+    "gender": "صنف",
+    "base location": "بیس مقام",
+
+ 
+    "// Profile ": "// Profile",
+ 
+    "Profile": "پروفائل",
+
+    "Messaging": "پیغام رسانی",
+    "My Posts": "میری پوسٹس",
+    "Favourite": "پسندیدہ", 
+
+    
+    "// Services ": "// Services",
+    "Software Developer": "سافٹ ویئر ڈویلپر",
+    "Labour": "مزدور",
+    "Car Wash": "کار کی دھلائی",
+    "Cleaning": "صفائی",
+    "Painter": "پینٹر",
+    "Electrician": "الیکٹریشن",
+    "Mechanic": "مکینک",
+    "Lock Master": "لاک ماسٹر",
+    "Gardener": "باغبان",
+    "Plumber": "پلمبر",
+    "Carpenter": "کارپینٹ ",
+    "": ""
+ 
+
+    
+
+
+}

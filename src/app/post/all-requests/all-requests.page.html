@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar color="primary"> 
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>All Requests</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="medium">
+  <!-- routerLink='/view-post/{{post.id}}' -->
+  <ion-card class="i-card-post" *ngFor="let bid of bidListForAPost" routerLink='/view-request/{{bid.id}}'>
+    <ion-row>
+      <ion-col size='8.5'>
+        <div>
+          <ion-label class="i-label-detail">
+            <h3 class="i-heading-title">{{bid.title}}</h3>
+            <p class="i-text">Date Created: {{bid.dateCreated.seconds | date: 'd MMM yyyy'}}</p>
+            <p class="i-text">Job Time: {{bid.jobTime}}</p>
+          </ion-label>
+        </div>
+      </ion-col>
+      <ion-col size='3.5'>
+        <div>
+          <ion-label>
+            <h3 class="i-heading-price">{{bid.budget}} Rs</h3>
+            <!-- <p class="i-text i-p-time">post.jobTime</p>
+            <p class="i-text i-p-time">bids</p> -->
+          </ion-label>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+
+</ion-content>

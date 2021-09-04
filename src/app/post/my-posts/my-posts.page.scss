@@ -1,0 +1,105 @@
+// .i-list-post {
+//     background: var(--ion-color-medium);
+.i-card-post {
+    padding: 5px;
+
+    .i-label-detail {
+        margin: 0px;
+
+        .i-heading-title {
+
+            font-size  : 18px;
+            font-weight: 700;
+            color      : var(--ion-color-dark);
+            opacity    : 1;
+
+        }
+
+        p {
+            color  : var(--ion-color-dark);
+            opacity: 0.5;
+        }
+    }
+
+
+    .i-heading-price {
+        font-weight: 700;
+        color      : var(--ion-color-dark);
+        font-size  : 18px;
+        text-align : right;
+        opacity    : 1;
+
+    }
+
+    .i-p-time {
+        text-align: right;
+        color     : var(--ion-color-dark);
+        opacity   : .5;
+    }
+
+}
+
+// .i-card-post {
+//     padding: 5px;
+
+//     .i-label-detail {
+//         margin: 0px;
+
+//         h1 {
+//             font-weight: 700;
+//             font-size  : 18px;
+//         }
+//     }
+
+//     .i-heading-price {
+//         font-weight: 700;
+//         font-size  : 18px;
+//         text-align : right;
+//         color      : var(--ion-color-dark);
+//     }
+
+//     .i-p-time {
+//         text-align: right;
+//         color     : var(--ion-color-dark);
+//         opacity   : 0.5;
+//     }
+
+// }
+// }
+
+.i-text {
+    color  : var(--ion-color-dark);
+    opacity: 0.5;
+}
+
+ion-content {
+    --background: var(--ion-color-medium);
+}
+
+ion-card,
+ion-item {
+    --background: var(--ion-color-light);
+}
+
+.i-icon {
+    fill: var(--ion-color-dark);
+}
+
+p {
+    color        : var(--ion-color-dark);
+    margin-bottom: 2px;
+}
+
+h3 {
+    opacity   : 0.5;
+    font-size : 14px;
+    margin-top: 2px;
+}
+.i-button {
+    border-radius: 25px;
+    text-align   : center;
+    margin   : 10px;
+    margin-bottom: 10px;
+    height       : 48px;
+    
+}

@@ -1,0 +1,99 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-button (click)="modalControllerDismissed()">
+        <ion-icon slot="icon-only" name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Send Request</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="medium">
+  <!-- <ion-card class="ion-padding">
+    <ion-item>
+      <ion-label>
+        <h3>{{postData.title}}</h3>
+        <p>{{postData.subCategory}}</p>
+        <p>Budget: {{postData.budget}}Rs</p>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <p>{{postData.description}}</p>
+    </ion-item>
+  </ion-card> -->
+
+
+  <form [formGroup]="sendRequestForm" (ngSubmit)="sendRequest(sendRequestForm.value)">
+    <ion-card class="ion-padding">
+      <ion-item>
+        <ion-icon class="i-icon" slot="start" src="assets/icon/label.svg"></ion-icon>
+        <ion-label position='floating'>Job Title
+          <ion-text *ngIf="sendRequestForm.value.title.length > 2 "> (max:{{sendRequestForm.value.title.length}}/25)
+          </ion-text>
+          <!-- <ion-text *ngIf="sendRequestForm.value.title.length < 2 "> (Bike Repairing)</ion-text> -->
+        </ion-label>
+        <ion-input formControlName="title"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Job Time</ion-label>
+        <ion-icon class="i-icon" slot="start" src="assets/icon/time.svg"></ion-icon>
+        <ion-select interface="popover" formControlName="jobTimeNumber">
+          <ion-select-option *ngFor="let time of deliverTimeNumber">{{time}}</ion-select-option>
+        </ion-select>
+        <ion-select interface="popover" formControlName="jobTimeUnit">
+          <ion-select-option *ngFor="let time of deliverTimeUnit">{{time}}</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-icon class="i-icon" slot="start" src="assets/icon/price.svg"></ion-icon>
+        <ion-label position='floating'>Budget
+          <ion-text *ngIf="sendRequestForm.value.budget.length > 1">
+            (Range: 100-999999)
+          </ion-text>
+        </ion-label>
+        <ion-input formControlName="budget"></ion-input>
+      </ion-item>
+      <ion-item lines='none'>
+        <ion-label>Availability</ion-label>
+      </ion-item>
+      <ion-item lines='none'>
+        <ion-label>24 hours</ion-label>
+        <ion-toggle slot="end" formControlName="available24Hour"></ion-toggle>
+      </ion-item>
+      <ion-item lines='none' *ngIf="sendRequestForm.value.available24Hour == false">
+        <ion-label>Start Time</ion-label>
+        <ion-select interface="popover" formControlName="availableStartTime">
+          <ion-select-option *ngFor="let time of availableTimeNumber">{{time}}</ion-select-option>
+        </ion-select>
+        <ion-select interface="popover" formControlName="availableStartTimeUnit">
+          <ion-select-option *ngFor="let unit of availableTimeUnit">{{unit}}</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item *ngIf="sendRequestForm.value.available24Hour == false">
+        <ion-label>End Time</ion-label>
+        <ion-select interface="popover" formControlName="availableEndTime">
+          <ion-select-option *ngFor="let time of availableTimeNumber">{{time}}</ion-select-option>
+        </ion-select>
+        <ion-select interface="popover" formControlName="availableEndTimeUnit">
+          <ion-select-option *ngFor="let unit of availableTimeUnit">{{unit}}</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label position='floating'>Description
+          <ion-text *ngIf="sendRequestForm.value.description.length<200">
+            (min: {{sendRequestForm.value.description.length}}/200)
+          </ion-text>
+          <ion-text *ngIf="sendRequestForm.value.description.length > 200">
+            (max: {{sendRequestForm.value.description.length}}/500)
+          </ion-text>
+        </ion-label>
+        <ion-textarea rows='6' formControlName="description"></ion-textarea>
+      </ion-item>
+    </ion-card>
+    <ion-button class="i-button" color="primary" type="submit" expand="full" [disabled]="!sendRequestForm.valid">
+      Post Job
+    </ion-button>
+  </form>
+
+</ion-content>

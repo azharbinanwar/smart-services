@@ -1,0 +1,140 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start" (click)="editProfileDismiss()">
+      <ion-button>
+        <ion-icon slot="icon-only" name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Edit Profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="medium" class="i-content-main">
+  <ion-grid class="i-grid-top ion-no-padding" fixed>
+    <ion-card class="ion-padding i-card-top">
+      <ion-grid fixed class="i-grid-user-profile">
+        <ion-row class="ion-justify-content-center ion-align-items-center" style="height: 100%">
+          <ion-avatar class="i-avatar-profile">
+            <ion-spinner *ngIf="spinnerBoolean == true" class="i-spinner" color="primary" name="lines"></ion-spinner>
+            <ion-avatar *ngIf="this.fireAuth.auth.currentUser == null ||
+            authService.userProfileImg == ''" class="i-avatar-profile-d">
+              <ion-icon class="i-icon-profile-d" src="assets/icon/person.svg">
+              </ion-icon>
+            </ion-avatar>
+            <img *ngIf="fireAuth.auth.currentUser != null &&
+            authService.userProfileImg != ''" class="i-img-profile" src="{{  authService.userProfileImg }}" />
+            <ion-avatar class="i-avatar-click" (click)="userProfilePicture()">
+              <ion-icon class="i-icon-avatar-click" src="assets/icon/camera.svg">
+              </ion-icon>
+            </ion-avatar>
+          </ion-avatar>
+        </ion-row>
+      </ion-grid>
+      <form [formGroup]="userUpdateForm">
+        <ion-item class="ion-text-center" lines="full">
+          <ion-input formControlName='user_Name' style="font-size: 30px;"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Description {{userUpdateForm.value.user_Description.length}}/150</ion-label>
+          <ion-textarea formControlName='user_Description'></ion-textarea>
+        </ion-item>
+      </form>
+
+    </ion-card>
+    <ion-grid class="i-grid-info ion-no-padding">
+      <ion-card class="i-card-info ion-padding">
+        <ion-list class="ion-no-padding" lines="full">
+          <ion-item>
+            <ion-icon class="i-icon" slot="start" src="assets/icon/mail.svg">
+            </ion-icon>
+            <ion-label position="floating">Email</ion-label>
+            <ion-input [(ngModel)]="authService.currentUserEmail" readonly="false"></ion-input>
+          </ion-item>
+          <form [formGroup]="userUpdateForm">
+            <ion-item>
+              <ion-label position="floating">Phone No</ion-label>
+              <ion-icon class="i-icon" slot="start" src="assets/icon/phone.svg"></ion-icon>
+              <ion-input maxlength="11" formControlName='user_PhoneNo' type='tel'></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label>Location</ion-label>
+              <ion-icon class="i-icon" slot="start" src="assets/icon/location.svg"></ion-icon>
+              <ion-select interface="popover" formControlName="user_BaseLocation">
+                <ion-select-option style="max-width: 100% !important; white-space: normal !important;"
+                  *ngFor="let base_location of baseLocations">{{base_location}}</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </form>
+
+        </ion-list>
+      </ion-card>
+      <ion-card *ngIf="this.authService.currentUserType != 'Employee'">
+        <ion-item lines='none'>
+          <ion-label>Become A Service Provider</ion-label>
+          <ion-toggle (ionChange)="userTypeChange()" [checked]="userIsSP" slot="end"></ion-toggle>
+        </ion-item>
+      </ion-card>
+
+      <ion-card *ngIf="userIsSP == true" class="ion-padding i-card-become-sp">
+        <ion-card-header>
+          <ion-card-title>Service Provider</ion-card-title>
+        </ion-card-header>
+        <ion-list class="ion-no-padding" lines="full">
+          <form [formGroup]="userBecomeSP">
+            <ion-item>
+              <ion-label>Service Name</ion-label>
+              <ion-icon class="i-icon" slot="start" src="assets/icon/services.svg"></ion-icon>
+              <ion-select interface="popover" formControlName="user_Service">
+                <ion-select-option *ngFor="let service of allServices" >{{service.serviceName}}</ion-select-option>
+              </ion-select>
+            </ion-item>
+            <ion-item>
+              <ion-label>Experience</ion-label>
+              <ion-icon class="i-icon" slot="start" src="assets/icon/experience.svg"></ion-icon>
+              <ion-select interface="popover" formControlName="user_Experience">
+                <ion-select-option *ngFor="let experience of experienceList">{{experience}}</ion-select-option>
+              </ion-select>
+            </ion-item>
+            <ion-item>
+              <ion-icon class="i-icon" slot="start" src="assets/icon/certification.svg">
+              </ion-icon>
+              <ion-label position="floating">Certification From</ion-label>
+              <ion-input formControlName="user_CertificationFrom"></ion-input>
+            </ion-item>
+          </form>
+
+          <ion-item>
+            <ion-icon class="i-icon" slot="start" src="assets/icon/mail.svg"></ion-icon>
+            <ion-label position="floating">Skill
+               <ion-text *ngIf="user_skill_list.length == 0">(Car Engine Repairing)</ion-text>
+               <ion-text *ngIf="user_skill_list.length <= 2">(Min: {{user_skill_list.length}}/3)</ion-text>
+               <ion-text *ngIf="user_skill_list.length > 2">(Mix: {{user_skill_list.length}}/10)</ion-text>
+            </ion-label>
+            <ion-input [disabled]="user_skill_list.length >= 10 ? true : false" [(ngModel)]="user_skill" minlength='2'
+              ></ion-input>
+            <ion-icon class="i-icon" slot="end" name="add" (click)="addSkill(user_skill)"></ion-icon>
+          </ion-item>
+          <ion-item class="i-item-skill-list" *ngIf="user_skill_list.length != 0" lines='noun'>
+            <ion-row>
+              <ion-item class="i-item-skill" *ngFor="let skill of user_skill_list" lines='none'>
+                <ion-label class="i-label-skill"> {{ skill }} </ion-label>
+                <ion-icon slot="end" name="close" class="i-icon-remove-skill" (click)="removeSkill(skill)"></ion-icon>
+              </ion-item>
+            </ion-row>
+          </ion-item>
+        </ion-list>
+
+      </ion-card>
+
+      <ion-button *ngIf="userIsSP == false" [disabled]="!userUpdateForm.valid" class="i-button" expand="block"
+        (click)='updateUserProfile(userUpdateForm.value, userBecomeSP.value, user_skill_list, userIsSP)'>
+        <ion-label>{{userUpdateForm.valid}} {{userIsSP}} NOT SP </ion-label>
+      </ion-button>
+      <ion-button *ngIf="userIsSP == true"
+        [disabled]="!(userUpdateForm.valid && userBecomeSP.valid && user_skill_list.length > 2)" class="i-button"
+        expand="block" (click)='updateUserProfile(userUpdateForm.value, userBecomeSP.value, user_skill_list, userIsSP)'>
+        <ion-label>Update Profile</ion-label>
+      </ion-button>
+    </ion-grid>
+  </ion-grid>
+</ion-content>

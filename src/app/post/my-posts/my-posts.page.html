@@ -1,0 +1,142 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>My Posts</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="toggleListSlide()">
+        <ion-icon slot="icon-only" [src]="postToggleListORSlide == false ? 'assets/icon/doc.svg': 'assets/icon/list.svg'"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="medium">
+  <!-- <app-general *ngIf="authService.currentUserPosts.length <= 0" [data]='myPostPage'></app-general> -->
+  <ion-slides *ngIf="postToggleListORSlide == true" [options]="sliderConfig">
+    <ion-slide *ngFor="let post of myPostsList">
+      <div>
+        
+      <ion-card class="ion-padding" >
+        <ion-item lines="full">
+          <ion-icon class="i-icon" slot="start" src="assets/icon/label.svg"></ion-icon>
+          <ion-label>
+            <p style="font-size: 12px;">Title</p>
+            <h3>{{post.title}}</h3>
+          </ion-label>
+        </ion-item>
+        <ion-item lines="full">
+          <ion-icon class="i-icon" slot="start" src="assets/icon/label.svg"></ion-icon>
+          <ion-label>
+            <p style="font-size: 12px;">Sub Category</p>
+            <h3>{{post.subCategory}}</h3>
+          </ion-label>
+        </ion-item>
+        <ion-item lines="full">
+          <ion-icon class="i-icon" slot="start" src="assets/icon/time.svg"></ion-icon>
+          <ion-label>
+            <p style="font-size: 12px;">Job Time</p>
+            <h3>{{post.jobTime}}</h3>
+          </ion-label>
+        </ion-item>
+        <ion-item lines="full">
+          <ion-icon class="i-icon" slot="start" src="assets/icon/time.svg"></ion-icon>
+          <ion-label>
+            <p style="font-size: 12px;">Date Created</p>
+            <h3>{{post.dateCreated.seconds*1000 | date: 'd MMM yyyy h:mm:ss a'}}</h3>
+          </ion-label>
+        </ion-item>
+        <ion-item lines="full">
+          <ion-icon class="i-icon" slot="start" src="assets/icon/services.svg"></ion-icon>
+          <ion-label>
+            <p style="font-size: 12px;">Service Name</p>
+            <h3>{{post.serviceName}}</h3>
+          </ion-label>
+        </ion-item>
+        <ion-item lines="full">
+          <ion-icon class="i-icon" slot="start" src="assets/icon/price.svg"></ion-icon>
+          <ion-label>
+            <p style="font-size: 12px;">Budget</p>
+            <h3>{{post.budget}}</h3>
+          </ion-label>
+        </ion-item>
+        <ion-item lines="full">
+          <ion-icon class="i-icon" slot="start" src="assets/icon/label.svg"></ion-icon>
+          <div>
+            <p style="font-size: 12px;">Description</p>
+            <h3>{{post.description}}</h3>
+          </div>
+        </ion-item>
+      </ion-card>
+      <!-- <ion-button class="i-button ion-no-padding" expand="block" routerLink='/all-requests/'>
+        <ion-text>
+          View Request
+        </ion-text>
+      </ion-button> -->
+      <ion-button [disabled]='post.employeeBids.length <= 0' class="i-button" expand="block" *ngIf="authService.currentUserUID == post.UID" routerLink='/all-requests/{{post.id}}'>
+        <ion-text *ngIf="post.employeeBids.length <= 0">
+          No Request to Show
+        </ion-text>
+        <ion-text *ngIf="post.employeeBids.length > 0">
+          View Request
+        </ion-text>
+      </ion-button>
+    
+    </div>
+
+    
+    </ion-slide>
+  </ion-slides>
+
+  <div *ngIf="this.postToggleListORSlide == false">
+    <ion-card class="i-card-post" *ngFor="let post of myPostsList" routerLink='/view-post/{{post.id}}'>
+      <ion-row>
+        <ion-col size='8.5'>
+          <div>
+            <ion-label class="i-label-detail">
+              <h3 class="i-heading-title">{{post.title}}</h3>
+              <p class="i-text">{{post.subCategory}}</p>
+              <p class="i-text">Service: {{post.serviceName}}</p>
+            </ion-label>
+          </div>
+        </ion-col>
+        <ion-col size='3.5'>
+          <div>
+            <ion-label>
+              <h3 class="i-heading-price">{{post.budget}} Rs</h3>
+              <p class="i-text i-p-time">{{post.jobTime}}</p>
+              <p class="i-text i-p-time">bids ({{post.employeeBids.length}})</p>
+            </ion-label>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+    <!-- <ion-card class="i-card-post" *ngFor="let post of myPostsList" routerLink='/view-post/{{post.id}}'>
+      <ion-row>
+        <ion-col size='9'>
+          <ion-item class="ion-no-padding" lines='none'>
+            <ion-label class="i-label-detail">
+              <h1>{{post.title}}</h1>
+              <p class="i-text">{{post.subCategory}}</p>
+              <p class="i-text">Service: {{post.serviceName}}</p>
+            </ion-label>
+          </ion-item>
+        </ion-col>
+        <ion-col size='3'>
+          <div>
+            <ion-label>
+              <h1 class="i-heading-price">{{post.budget}} Rs</h1>
+              <p class="i-p-time">{{post.jobTime}}</p>
+            </ion-label>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-card> -->
+  </div>
+</ion-content>
+<ion-fab (click)="postAJob()" vertical="bottom" horizontal="end" slot="fixed">
+  <ion-fab-button>
+    <ion-icon src="assets/icon/edit.svg"></ion-icon>
+  </ion-fab-button>
+</ion-fab>

@@ -1,0 +1,75 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{serviceName | translate}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="i-main-content">
+  <ion-card *ngIf="!serviceName" color="light" class="i-card-service ion-text-center ion-padding">
+    <ion-item class="ion-text-center" lines="none">
+      <ion-label>
+        <ion-avatar class="i-img-s">
+          <ion-skeleton-text animated style="width: 100%"></ion-skeleton-text>
+        </ion-avatar>
+        <p>
+          <ion-skeleton-text animated style="margin-left: 25%; width: 50%"></ion-skeleton-text>
+        </p>
+      </ion-label>
+    </ion-item>
+  </ion-card>
+  <ion-card *ngIf="serviceName" color="light" class="i-card-service ion-text-center ion-padding">
+    <ion-item class="ion-text-center" lines="none">
+      <ion-label>
+        <ion-icon class="i-img"  icon="assets/icon/services/{{serviceIcon}}.svg"></ion-icon>
+        <p>{{serviceName | translate}} ({{joinedUsers.length}})</p>
+
+      </ion-label>
+    </ion-item>
+  </ion-card>
+  <ion-list class="i-card-users" style="background-color: transparent;">
+
+    <ion-card *ngFor="let user of usersInSameService">
+      <ion-buttons class="i-icon-heart">
+        <ion-button (click)="toggleFavorite(user.id)"  *ngIf="fireAuth.auth.currentUser != null">
+          <!-- <ion-icon slot="start" name="add"></ion-icon> -->
+          <ion-icon slot="icon-only" color="danger"
+            [src]="authService.userFavourite.indexOf(user.id) == -1? 'assets/icon/heart-empty.svg' : 'assets/icon/heart.svg'">
+          </ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <ion-row class="i-row-user">
+        <ion-col (click)="navigateToProfile(user.id)" size='3' class="i-col-user-avatar">
+          <ion-avatar class="i-avatar">
+            <ion-avatar *ngIf="user.userProfileImg == '' " class="i-avatar-profile">
+              <ion-icon class="i-icon-profile" src="assets/icon/person.svg">
+              </ion-icon>
+            </ion-avatar>
+            <img *ngIf="user.userProfileImg != ''" [src]="user.userProfileImg" />
+          </ion-avatar>
+
+        </ion-col>
+        <ion-col (click)="navigateToProfile(user.id)" class="i-col-user-detail">
+          <h2 class="i-h2-username">{{user.userName}}</h2>
+          <ion-row class="i-row-review">
+            <p class="i-p-review"> Reviews ({{user.userReviews.length}}) {{4.5}}</p>
+            <ion-icon class="i-icon-star" name="star"></ion-icon>
+            <ion-icon class="i-icon-star" name="star"></ion-icon>
+            <ion-icon class="i-icon-star" name="star"></ion-icon>
+            <ion-icon class="i-icon-star" name="star"></ion-icon>
+            <ion-icon class="i-icon-star" name="star"></ion-icon>
+          </ion-row>
+
+          <ion-row>
+            <div class="i-p-job">Job: {{50}}</div>
+            <div class="i-p-date">{{user.userSPDate.seconds * 1000 | date: 'dd MMM yyyy'}}</div>
+          </ion-row>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+  </ion-list>
+
+</ion-content>

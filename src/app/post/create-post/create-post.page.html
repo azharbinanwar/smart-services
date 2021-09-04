@@ -1,0 +1,67 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-button (click)="modalControllerDismissed()">
+        <ion-icon slot="icon-only" name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Create Post</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="medium">
+
+  <form [formGroup]="createPostForm" (ngSubmit)="createAPost(createPostForm.value)">
+    <ion-card class="ion-padding">
+      <ion-item>
+        <ion-icon class="i-icon" slot="start" src="assets/icon/label.svg"></ion-icon>
+        <ion-label position='floating'>Title 
+          <ion-text *ngIf="createPostForm.value.title.length > 2 "> (max:{{createPostForm.value.title.length}}/25)</ion-text>
+          <ion-text *ngIf="createPostForm.value.title.length < 2 "> (Bike Repairing)</ion-text>
+        </ion-label>
+        <ion-input formControlName="title"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-icon class="i-icon" slot="start" src="assets/icon/label.svg"></ion-icon>
+        <ion-label position='floating'>Sub category 
+          <ion-text *ngIf="createPostForm.value.subCategory.length > 2 "> (max:{{createPostForm.value.title.length}}/24)</ion-text>
+          <ion-text *ngIf="createPostForm.value.subCategory.length < 2" > (Engine work) </ion-text>
+        </ion-label>
+        <ion-input formControlName="subCategory"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Service Name</ion-label>
+        <ion-icon class="i-icon" slot="start" src="assets/icon/services.svg"></ion-icon>
+        <ion-select interface="popover" formControlName="serviceName">
+          <ion-select-option *ngFor="let service of allServices">{{service.serviceName}}</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label position='floating'>Description
+           
+           <ion-text *ngIf="createPostForm.value.description.length<200" > (min: {{createPostForm.value.description.length}}/200) </ion-text>
+           <ion-text *ngIf="createPostForm.value.description.length > 200 "> (max: {{createPostForm.value.description.length}}/500)</ion-text>
+          </ion-label>
+        <ion-textarea rows='6' formControlName="description"></ion-textarea>
+      </ion-item>
+      <ion-item>
+        <ion-label>Job Time</ion-label>
+        <ion-icon class="i-icon" slot="start" src="assets/icon/time.svg"></ion-icon>
+        <ion-select interface="popover" formControlName="jobTimeNumber">
+          <ion-select-option *ngFor="let time of deliverTimeNumber">{{time}}</ion-select-option>
+        </ion-select>
+        <ion-select interface="popover" formControlName="jobTimeUnit">
+          <ion-select-option *ngFor="let time of deliverTimeUnit">{{time}}</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-icon class="i-icon" slot="start" src="assets/icon/price.svg"></ion-icon>
+        <ion-label position='floating'>Budget</ion-label>
+        <ion-input type="number" formControlName="budget"></ion-input>
+      </ion-item>
+    </ion-card>
+    <ion-button class="i-button" color="primary" type="submit" expand="full" [disabled]="!createPostForm.valid">Post Job
+    </ion-button>
+  </form>
+
+</ion-content>

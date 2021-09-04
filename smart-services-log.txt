@@ -1,0 +1,816 @@
+Smart Service Project
+
+2020-02-12 WEDNESDAY
+{
+    TIME
+        -> 4 hours
+        -> App Created With Side bar menu
+}
+2020-02-15 SATURDAY
+{
+    TIME
+        -> 4 hours    (8:00-12:00 pm)
+    APPLIED
+        -> Color Scheme Dynamically changed
+        -> Side bar list changed and rearranged
+        -> Empty login page created and open from sidebar menu
+
+    LEARNED
+        -> How to apply different color Scheme?
+        -> How to open Model control?
+}
+2020-02-16 SUNDAY
+{
+    TIME
+        -> 2 hours    (9:00-12:00 pm)
+    APPLIED
+        -> Color Scheme Test on Login Page for Dynamically APPLIED
+        -> Login Page (FrontEnd) Design
+    
+    LEARNED
+        -> Color Scheming
+        -> Proper color is Applied 
+        -> Login InputField and Button is created
+}
+2020-02-17 MONDAY
+{
+    TIME
+        -> 1 hours (10:00-11:00 am)
+    APPLIED
+        -> Empty Settings page created
+    TIME 
+        -> 3 hours (10:00-1:30 Night)
+    LEARNED
+        -> SCSS properties
+}
+2020-02-18 TUESDAY
+{
+    TIME
+        -> 4 hours (9:00-1:00 Night)
+    APPLIED
+        -> Login Screen Completed
+        -> FrontEnd
+            -> Login/Sign Up Button with ripple effect
+            -> Login With Google/Facebook
+            -> Remember Me with check Box
+    LEARNED
+        -> SCSS properties
+        -> ion-item-divider
+        -> ion-button-fab custom icon
+        -> SCSS (Shadow properties)
+}
+2020-02-19 WEDNESDAY 
+{
+    TIME
+        -> 3 hours (8:00-11:00 pm)
+    APPLIED
+        -> Settings Page Setup
+        -> FrontEnd
+            -> Login/Sign up Link
+            -> List of Settings is display
+    LEARNED
+        -> SCSS properties
+        -> ion-grid and col and row 
+}
+
+
+    -> WORKING DAYS:        6 days
+    -> SPENT DAYS:          8 days
+    -> SPENT HOURS:         21 Hours
+
+
+
+BREAK
+{
+    2020-02-24 to 2020-03-02
+    Final Exam
+}
+
+2020-03-02 TUESDAY
+{
+    TIME
+        -> 2 hours (11:00 pm -01:00 am)
+    SEARCH
+        -> Multiple languages
+}
+2020-03-06 FRIDAY
+{
+    TIME
+        -> 1 hours (09:00 pm -10:00 pm)
+    LEARNED
+        -> Multiple languages
+}
+2020-03-09 MONDAY
+{
+    TIME
+        -> 4 hours (08:00 pm -12:00 pm)
+    APPLIED
+        -> Multiple languages Searching
+        -> Urdu and English Added to Settings Page as default
+    SEARCH
+        -> Default values are not store
+        -> Search for app icons
+}
+
+THIS WEEK
+    -> WORKING DAYS:        3 days
+    -> SPENT DAYS:          20 days
+    -> SPENT HOURS:         5 Hours
+TOTAL
+    -> WORKING DAYS:        9 days
+    -> SPENT DAYS:          28 days
+    -> SPENT HOURS:         26:30 Hours
+
+2020-03-11 WEDNESDAY
+{
+    TIME
+        -> 3 hours (08:00 pm -11:00 pm)
+    SEARCH and APPLIED
+        -> Ionic Storage
+        -> Error Not Solve
+}
+2020-03-12 THURSDAY
+{
+    TIME
+        -> 1 hours (10:00 am 11:00 am)
+    SEARCH
+        -> Ionic Storage
+        -> Error Solve
+    TIME
+        -> 3 hours (7:00 pm 10:00 pm)
+    APPLIED
+        -> Ionic Storage
+        -> Language added to Settings and Login Page
+        -> Language icon and loaded through list instead of hard code
+}
+2020-03-13 FRIDAY
+{
+    TIME
+        -> 5 hours (11:00 am 04:00 am)
+    SEARCH and APPLIED
+        -> Ionic Storage
+        -> Not storing value every time set default language
+    TIME
+        -> 2 hours (9:00 pm 11:00 pm)
+    APPLIED and LEARNED
+        -> Ionic Storage
+        -> Theme Model control
+}
+2020-03-14 SATURDAY
+{
+    TIME
+        -> 5 hours (11:00 am 04:00 am)
+    SEARCH and APPLIED
+        -> Ionic Storage
+        -> Ionic language checkbox
+}
+2020-03-15 SUNDAY
+{
+    TIME
+        -> 3 hours (02:00 am 05:00 am)
+    APPLIED and LEARNED
+        -> Ionic Storage
+        -> Ionic language checkbox
+        -> Code make smaller
+        -> check box add with selected language
+    TIME
+        -> 3 hours (11:00 pm 2:00 am)
+    SEARCH
+        -> Cordova
+}
+2020-03-16 MONDAY
+{
+    TIME
+        -> 4 hours (02:00 pm 06:00 pm)
+    APPLIED and LEARNED
+        -> Theme
+        -> Ionic theme checkbox
+        -> Code make smaller for settings item list
+    TIME
+        -> 2 hours (10:00 pm 12:00 am)
+    APPLIED and LEARNED
+        -> Use of JSON object list
+        -> App Theme
+            -> Light
+            -> Dark
+            -> Default
+        -> Status bar and customizable according to all themes
+}
+
+THIS WEEK
+    -> WORKING DAYS:        6 days
+    -> SPENT DAYS:          7 days
+    -> SPENT HOURS:         37 Hours
+TOTAL
+    -> WORKING DAYS:        15 days
+    -> SPENT DAYS:          35 days
+    -> SPENT HOURS:         63 Hours
+
+
+2020-03-17 TUESDAY
+{
+    TIME
+        -> 3 hours (03:00 pm 06:00 pm)
+    APPLIED and LEARNED
+        -> Theme
+        -> Ionic Language
+        -> Code make smaller
+    TIME
+        -> 3 hours (09:00 pm 12:00 am)
+    SEARCH and LEARNED
+        -> Sign Up page
+        -> Ion-segment
+	    -> ion-slides
+}
+2020-03-18 WEDNESDAY
+{
+    TIME
+        -> 4 hours (02:00 pm 06:00 pm)
+    APPLIED and LEARNED
+        -> Ionic theme with Sign Up
+        -> Code make smaller
+    TIME
+        -> 2 hours (10:00 pm 12:00 am)
+    APPLIED  and LEARNED
+        -> Sign Up page FrontEnd
+	    -> Ionic super tabs
+}
+2020-03-19 THURSDAY
+{
+    TIME
+        -> 2 hours (10:00 am 12:00 am)
+    SEARCH, APPLIED and LEARNED
+        -> Sign Up FrontEnd
+        -> Code make smaller
+    TIME
+        -> 1 hours (10:00 pm 11:00 am)
+    RND
+        -> Generic Testing
+}
+2020-03-20 FRIDAY
+{
+    TIME
+        -> 4 hours (09:00 am 01:00 pm)
+    RND
+        -> Generic Testing
+        -> Firebase Searching
+}
+2020-03-21 SATURDAY
+{
+    TIME
+        -> 4 hours (09:00 am 01:00 pm)
+    SEARCH, APPLIED and LEARNED
+        -> Firebase Realtime Database and Cloud Database Searching
+        -> Firebase Sign in and Sign up Just Checking
+    TIME
+        -> 1 hours (10:00 pm 11:00 pm)
+    RND
+        -> Generic Testing
+}
+2020-03-22 SUNDAY
+{
+    TIME
+        -> 4 hours (09:00 am 12:00 am)
+    SEARCH, APPLIED and LEARNED
+        -> Firebase Realtime Database and Cloud Database Searching
+        -> App icons and Themes
+        -> Theme Modified and one more theme added
+    TIME
+        -> 1 hours (10:00 pm 11:00 pm)
+    RND
+        -> Generic Testing
+}
+2020-03-23 MONDAY
+{
+    TIME
+        -> 3 hours (09:00 am 12:00 am)
+    SEARCH, APPLIED and LEARNED
+        -> Firebase Realtime Database and Cloud Database Searching
+        -> App icons and Themes
+    RND
+        -> Generic Testing
+}
+
+THIS WEEK
+    -> WORKING DAYS:        7 days
+    -> SPENT DAYS:          7 days
+    -> SPENT HOURS:         32 Hours
+TOTAL
+    -> WORKING DAYS:        22 days
+    -> SPENT DAYS:          42 days
+    -> SPENT HOURS:         95 Hours
+
+
+
+2020-03-24 TUESDAY
+{
+    TIME
+        -> 3 hours (09:00 am 12:00 am)
+    SEARCH, APPLIED and LEARNED
+        -> Firebase Realtime Database and Cloud Database Searching
+        -> Sign in and Sign up
+    RND
+        -> Generic Testing
+}
+2020-03-25 WEDNESDAY
+{
+    TIME
+        -> 4 hours (08:00 am 12:00 am)
+    SEARCH, APPLIED and LEARNED
+        -> Firebase Realtime Database and Cloud Database Searching
+        -> Sign in and Sign up
+    RND
+        -> Generic Testing
+}
+2020-03-26 THURSDAY
+{
+    TIME
+        -> 4 hours (08:00 am 12:00 am)
+    SEARCH, APPLIED and LEARNED
+        -> Firebase Realtime Database and Cloud Database Searching
+        -> Sign in and Sign up
+        -> SVG Icon use
+    RND
+        -> Generic Testing
+}
+2020-03-27 FRIDAY
+{
+    TIME
+        -> 6 hours (The Whole Day)
+    SEARCH, APPLIED and LEARNED
+        -> Firebase Realtime Database and Cloud Database Searching
+        -> Sign in and Sign up ERROR
+    RND
+        -> Generic Testing
+}
+2020-03-28 SATURDAY
+{
+    TIME
+        -> 4 hours (08:00 am 12:00 am)
+    SEARCH, APPLIED and LEARNED
+        -> Profile Page
+    TIME
+        -> 3 hours (09:00 pm 12:00 pm)
+    SEARCH, APPLIED and LEARNED
+        -> Firebase Cloud Database Searching
+        -> FireStore 
+            -> Collection
+            -> Documentation
+        -> USER DATA Fetching ERROR
+}
+2020-03-29 SUNDAY
+{
+    TIME
+        -> 4 hours (9:00 am 1:00 pm)
+    SEARCH, APPLIED and LEARNED
+        -> Firebase Cloud Database Searching
+        -> FireStore 
+            -> Collection
+            -> Documentation
+        -> Profile Data Update
+            -> Profile Show for Current User
+}
+2020-03-30 MONDAY
+{
+    TIME
+        -> 5 hours (9:00 am 2:00 pm)
+    SEARCH, APPLIED and LEARNED
+        -> App flow
+        -> Extra Code Remove
+        -> Profile Null Data ERROR
+}
+
+THIS WEEK
+    -> WORKING DAYS:        7 days
+    -> SPENT DAYS:          7 days
+    -> SPENT HOURS:         33 Hours
+TOTAL
+    -> WORKING DAYS:        29 days
+    -> SPENT DAYS:          49 days
+    -> SPENT HOURS:         128 Hours
+{   
+    -> Theme
+    -> Language    
+    -> Sign In and Sign Up
+    -> Profile Page Done 
+}
+
+
+2020-04-02 THURSDAY
+{
+    TIME
+        -> 4 hours (9:00 pm 1:00 am)
+    SEARCH, APPLIED and LEARNED
+        -> Profile Bug fixed
+        -> Auth Page (Control Model) clear (every time)
+}
+2020-04-03 FRIDAY
+{
+    TIME
+        -> 4 hours (9:00 pm 1:00 am)
+    SEARCH, APPLIED and LEARNED
+        -> Profile Image Pick
+            -> From Gallery
+                -> Crop in Square
+}
+2020-04-04 SATURDAY
+{
+    TIME
+        -> 5 hours (8:00 pm 1:00 am)
+    SEARCH, APPLIED and LEARNED
+        -> Profile Image Pick
+            -> From Gallery
+            -> From Camera
+                -> Crop in Square
+}       -> Uploading Error to Firebase Storage
+2020-04-05 SUNDAY
+{
+    TIME
+        -> 5 hours (8:00 am 1:00 pm)
+        -> 2 hours (2:00 pm 4:00 pm)
+        -> 3 hours (10:00 am 1:00 am)
+    SEARCH, APPLIED and LEARNED
+        -> Profile Image Pick
+        -> Uploading Error to Firebase Storage
+        -> Profile Page Settings
+        -> Theme Managing
+}
+2020-04-06 MONDAY
+{
+    TIME
+        -> 5 hours (8:00 am 1:00 pm)
+    SEARCH, APPLIED and LEARNED
+        -> Model Control Issue
+        -> Production (--prod) issue
+        -> (ionic cordova run browser --prod --release) fast Testing with on browser --prod
+    TIME
+        -> 3 hours (2:00 pm 5:00 pm)
+        -> 3 hours (10:00 pm 1:00 am)    
+    SEARCH, APPLIED and LEARNED
+        -> Themes
+            -> Themes Auto Generated
+            -> Theme contrast 
+            -> Theme Colors
+}
+
+THIS WEEK
+    -> WORKING DAYS:        5 days
+    -> SPENT DAYS:          7 days
+    -> SPENT HOURS:         34 Hours
+TOTAL
+    -> WORKING DAYS:        34 days
+    -> SPENT DAYS:          56 days
+    -> SPENT HOURS:         162 Hours
+{   
+    -> Theme
+    -> Language    
+    -> Sign In and Sign Up
+    -> Profile Page Done 
+}
+
+2020-04-07 TUESDAY
+{
+    TIME
+        -> 5 hours (8:00 am 1:00 pm)
+    SEARCH, APPLIED and LEARNED
+        -> App Optimization
+        -> Themes Adjustment
+        -> App Icon Searching
+        -> Theme and Icon (Science)
+    TIME
+        -> 2 hours (2:00 pm 4:00 pm)
+        -> 5 hours (9:00 pm 2:00 am)    
+    SEARCH, APPLIED and LEARNED
+        -> Themes
+            -> App Optimization
+            -> Icon Setting
+                -> SVG Icon
+                -> Auto color change
+            -> Profile View Page Changing
+            -> New Theme Applied to All App
+}
+
+2020-04-07 TUESDAY
+{
+    TIME
+        -> 5 hours (8:00 am 1:00 pm)
+    SEARCH, APPLIED and LEARNED
+        -> App Optimization
+        -> Themes Adjustment
+        -> App Icon Searching
+        -> Theme and Icon (Science)
+    TIME
+        -> 2 hours (2:00 pm 4:00 pm)
+        -> 4 hours (9:00 pm 1:00 am)    
+    SEARCH, APPLIED and LEARNED
+        -> Themes
+            -> App Optimization
+            -> Icon Setting
+                -> SVG Icon
+                -> Auto color change
+            -> Profile View Page Changing
+            -> New Theme Applied to All App
+}
+2020-04-08 WEDNESDAY
+{
+    TIME
+        -> 5 hours (8:00 am 1:00 pm)
+    SEARCH, APPLIED and LEARNED
+        -> App Optimization
+        -> Profile Page
+    TIME
+        -> 3 hours (2:00 pm 5:00 pm)
+        -> 2 hours (10:00 pm 12:00 pm)    
+    SEARCH, APPLIED and LEARNED
+        -> Profile Page Editing
+}
+2020-04-09 THURSDAY
+{
+    TIME
+        -> 5 hours (8:00 am 1:00 pm)
+        -> 2 hours (2:00 pm 4:00 pm)
+        -> 2 hours (10:00 pm 12:00 pm)    
+    SEARCH, APPLIED and LEARNED
+        -> Profile Page Editing
+        -> User Image Icon Make customizable(for color dynamically)
+        -> Profile Editing
+            -> Profile Editing Page
+            -> Profile Popover, Model Control, Alert
+}
+2020-04-10 FRIDAY
+{
+    TIME
+        -> 2 hours (9:00 am 11:00 am)
+    SEARCH, APPLIED and LEARNED
+        -> Profile Page Editing
+}
+2020-04-11 SATURDAY
+{
+    TIME
+        -> 3 hours (8:00 am 11:00 am)
+    SEARCH, APPLIED and LEARNED
+        -> Profile Page Editing
+}
+2020-04-13 MONDAY
+{
+    TIME
+        -> 4 hours (10:00 am 1:00 pm)
+        -> 3 hours (3:00 pm 6:00 pm)
+    SEARCH, APPLIED and LEARNED
+        -> Profile Page Editing
+    TIME
+        -> 3 hours (9:00 pm 12:00 pm)
+    SEARCH, APPLIED and LEARNED
+        -> Profile Page Editing
+}
+
+
+THIS WEEK
+    -> WORKING DAYS:        6 days
+    -> SPENT DAYS:          7 days
+    -> SPENT HOURS:         56 Hours
+TOTAL
+    -> WORKING DAYS:        40 days
+    -> SPENT DAYS:          63 days
+    -> SPENT HOURS:         218 Hours
+{   
+    -> Theme
+    -> Language    
+    -> Sign In and Sign Up
+    -> Profile Page Done 
+}
+
+
+
+2020-04-14 TUESDAY
+{
+    TIME
+        -> 5 hours (9:00 am 1:00 pm)
+        -> 2 hours (2:00 pm 4:00 pm)
+    SEARCH, APPLIED and LEARNED
+        -> Form Validation
+        -> Auth page Validation
+}
+2020-04-15 WEDNESDAY
+{
+    TIME
+        -> 5 hours (9:00 am 1:00 pm)
+        -> 3 hours (2:00 pm 5:00 pm)
+    SEARCH, APPLIED and LEARNED
+        -> Form Validation
+        -> Profile page Form Validation
+}
+2020-04-16 THURSDAY
+{
+    TIME
+        -> 5 hours (9:00 am 1:00 pm)
+        -> 2 hours (2:00 pm 4:00 pm)
+    SEARCH, APPLIED and LEARNED
+        -> Form Validation
+        -> Profile Validation
+        -> Update Profile with Validation
+}
+2020-04-19 SUNDAY
+{
+    TIME
+        -> 5 hours (9:00 am 1:00 pm)
+        -> 3 hours (2:00 pm 5:00 pm)
+    SEARCH, APPLIED and LEARNED
+        -> Become a Service Provider
+}
+2020-04-20 MONDAY
+{
+    TIME
+        -> 5 hours (9:00 am 1:00 pm)
+        -> 3 hours (2:00 pm 5:00 pm)
+    SEARCH, APPLIED and LEARNED
+        -> Become a Service Provider
+        -> Profile Setup for Edit
+}
+
+THIS WEEK
+    -> WORKING DAYS:        5 days
+    -> SPENT DAYS:          7 days
+    -> SPENT HOURS:         38 Hours
+TOTAL
+    -> WORKING DAYS:        45 days
+    -> SPENT DAYS:          70 days
+    -> SPENT HOURS:         256 Hours
+{   
+    -> Form Validation
+    -> Edit  Profile
+    -> Become a Service Provider
+}
+
+
+2020-04-21 TUESDAY
+{
+    TIME
+        -> 5 hours (9:00 am 1:00 pm)
+        -> 3 hours (2:00 pm 5:00 pm)
+    SEARCH, APPLIED and LEARNED
+        -> Error Version Update
+        -> Icon and Version Error
+}
+2020-04-22 WEDNESDAY
+{
+    TIME
+        -> 5 hours (9:00 am 1:00 pm)
+        -> 3 hours (2:00 pm 5:00 pm)
+    SEARCH, APPLIED and LEARNED
+        -> Profile Update
+        -> Profile Update with Become a Service Provider
+}
+2020-04-23 THURSDAY
+{
+    TIME
+        -> 5 hours (9:00 am 1:00 pm)
+        -> 3 hours (2:00 pm 5:00 pm)
+    SEARCH, APPLIED and LEARNED
+        -> Profile Update (DONE)
+        -> QUIRES and Load user data in selected list
+}
+2020-04-24 FRIDAY
+{
+    TIME
+        -> 5 hours (9:00 am 1:00 pm)
+        -> 3 hours (2:00 pm 5:00 pm)
+    SEARCH, APPLIED and LEARNED
+        -> Chat Searching
+}
+2020-04-25 SATURDAY
+{
+    TIME
+        -> 5 hours (9:00 am 1:00 pm)
+        -> 3 hours (2:00 pm 5:00 pm)
+    SEARCH, APPLIED and LEARNED
+        -> Chat Screen
+        -> Chatting with One to One person
+}
+2020-04-26 SUNDAY
+{
+    TIME
+        -> 5 hours (9:00 am 1:00 pm)
+        -> 3 hours (2:00 pm 5:00 pm)
+    SEARCH, APPLIED and LEARNED
+        -> Flow of Chatting 
+        -> Employee Profile Preview
+}
+2020-04-27 MONDAY
+{
+    TIME
+        -> 5 hours (9:00 am 1:00 pm)
+        -> 3 hours (2:00 pm 5:00 pm)
+    SEARCH, APPLIED and LEARNED
+        -> Flow of Chatting 
+        -> Chat Screen
+}
+
+THIS WEEK
+    -> WORKING DAYS:        7 days
+    -> SPENT DAYS:          7 days
+    -> SPENT HOURS:         56 Hours
+TOTAL
+    -> WORKING DAYS:        52 days
+    -> SPENT DAYS:          77 days
+    -> SPENT HOURS:         312 Hours
+{   
+    -> Version Update (ERROR)
+    -> Profile Update Done
+    -> Chat Screen
+    -> View Employee Profile
+    -> Chat one to one Employee
+    -> Chat Separate Screen
+}
+
+
+2020-04-28 THURSDAY
+{
+    TIME
+        -> 5 hours (9:00 am 1:00 pm)
+        -> 3 hours (2:00 pm 5:00 pm)
+    SEARCH, APPLIED and LEARNED
+    SEARCH, APPLIED and LEARNED
+        -> Flow of Chatting 
+        -> Chat Screen
+}
+2020-04-29 FRIDAY
+{
+    TIME
+        -> 5 hours (9:00 am 1:00 pm)
+        -> 3 hours (2:00 pm 5:00 pm)
+    SEARCH, APPLIED and LEARNED
+    SEARCH, APPLIED and LEARNED
+        -> Favourite List
+}
+
+2020-05-04 MONDAY
+{
+    TIME
+        -> 5 hours (9:00 am 1:00 pm)
+        -> 3 hours (2:00 pm 5:00 pm)
+    SEARCH, APPLIED and LEARNED
+    SEARCH, APPLIED and LEARNED
+        -> Favourite List
+        -> Favourite Page
+}
+
+THIS WEEK
+    -> WORKING DAYS:        3 days
+    -> SPENT DAYS:          7 days
+    -> SPENT HOURS:         24 Hours
+TOTAL
+    -> WORKING DAYS:        55 days
+    -> SPENT DAYS:          84 days
+    -> SPENT HOURS:         336 Hours
+{   
+    -> Chat Screen Flow
+    -> Favourite List
+}
+
+
+2020-05-05 TUESDAY
+{
+    TIME
+        -> 5 hours (9:00 am 1:00 pm)
+        -> 3 hours (2:00 pm 5:00 pm)
+    SEARCH, APPLIED and LEARNED
+    SEARCH, APPLIED and LEARNED
+        -> Home Page Favourite List
+        -> Model Control Page for Create Poste
+}
+2020-05-11 MONDAY
+{
+    TIME
+        -> 5 hours (9:00 am 1:00 pm)
+        -> 3 hours (2:00 pm 5:00 pm)
+    SEARCH, APPLIED and LEARNED
+    SEARCH, APPLIED and LEARNED
+        -> Post a job
+}
+2020-05-12 TUESDAY
+{
+    TIME
+        -> 5 hours (9:00 am 1:00 pm)
+        -> 3 hours (2:00 pm 5:00 pm)
+    SEARCH, APPLIED and LEARNED
+    SEARCH, APPLIED and LEARNED
+        -> Post a job
+}
+2020-05-18 MONDAY
+{
+    TIME
+        -> 5 hours (9:00 am 1:00 pm)
+        -> 3 hours (2:00 pm 5:00 pm)
+    SEARCH, APPLIED and LEARNED
+    SEARCH, APPLIED and LEARNED
+        -> Post a job
+}
+
+2020-06-(20-21-22) SATURDAY-SUNDAY-MONDAY
+{
+    TIME
+        -> 12 hours 
+    SEARCH, APPLIED and LEARNED
+        -> Send Request
+}

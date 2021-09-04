@@ -1,0 +1,8 @@
+{
+  "appId": "com.smartservices.azhar",
+  "appName": "Smart Services",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "cordova": {}
+}

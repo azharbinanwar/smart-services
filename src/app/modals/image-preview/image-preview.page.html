@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-button (click)="close()">
+        <ion-icon slot="icon-only" name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <!-- <ion-buttons slot="end">
+      <ion-button (click)="close()">
+        <ion-icon slot="icon-only" name="remove"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button (click)="close()">
+        <ion-icon slot="icon-only" name="add"></ion-icon>
+      </ion-button>
+    </ion-buttons> -->
+    <ion-title>{{name}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+
+  <ion-slides [options]="sliderOption" #slider>
+    <ion-slide>
+      <div class="swiper-zoom-container">
+        <img class="i-img" src="{{imageURL}}">
+      </div>
+    </ion-slide>
+  </ion-slides>
+
+</ion-content>
+<!-- <div>
+  <ion-icon slot="icon-only" name="close"></ion-icon>
+  <ion-icon slot="icon-only" name="close"></ion-icon>
+</div> -->

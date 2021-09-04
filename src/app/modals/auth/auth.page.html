@@ -1,0 +1,214 @@
+<ion-header style="z-index: 0;">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-button (click)="dismissmodalCtrl()">
+        <ion-icon slot="icon-only" name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>{{'Smart Services' | translate}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="auth-content">
+  <super-tabs class="auth-content-tabs">
+    <super-tabs-toolbar slot="top">
+      <super-tab-button>
+        <ion-item color="primary">
+          <ion-label >{{'Sign In' | translate}}</ion-label>
+        </ion-item>
+      </super-tab-button>
+      <super-tab-button>
+        <ion-item  color="primary">
+          <ion-label color="dark">{{'Sign Up' | translate}}</ion-label>
+        </ion-item>
+      </super-tab-button>
+    </super-tabs-toolbar>
+    
+    <super-tabs-container>
+      <super-tab>
+        <ion-content auth-form color="medium">
+          <ion-grid fixed class="i-gird-all ion-padding">
+            <img class="login-content-img" src="./assets/icon/favicon.png">
+            <ion-grid class="i-grid ion-padding">
+              <form [formGroup]="sign_in_form" (ngSubmit)="attemptSignIn(sign_in_form.value)">
+
+                <ion-item class="i-input" color="light" lines="none" color="light">
+                  <ion-icon [style.fill]="themeService.dark" slot="start" src="assets/icon/mail.svg"></ion-icon>
+                  <ion-input class="ion-no-padding" formControlName="sign_in_user_email" type="email"
+                    placeholder="{{ 'email' | translate }}" required></ion-input>
+                </ion-item>
+                <!-- <ion-card class="i-input"> -->
+                <ion-item class="i-input" color="light" lines="none" color="light">
+                  <ion-icon [style.fill]="themeService.dark" slot="start" src="assets/icon/lock.svg"></ion-icon>
+                  <ion-input class="ion-no-padding" formControlName="sign_in_user_password"
+                    [type]="signInPasswordBoolean ? 'password' : 'text'" placeholder="{{ 'password' | translate }}"
+                    required></ion-input>
+                  <ion-icon slot="end" [style.fill]="themeService.dark"
+                    [src]="signInPasswordBoolean ? 'assets/icon/eye.svg' : 'assets/icon/eye-off.svg'"
+                    (click)="showHidePassword('signInPassword')"></ion-icon>
+                </ion-item>
+                <!-- </ion-card> -->
+                <p>{{'Forget password' | translate}}</p>
+                <ion-item color="transparent" class="i-remember-checkbox" lines="none">
+                  <ion-label class="i-label">{{'Remember me' | translate}}</ion-label>
+                  <ion-checkbox class="i-checkbox" slot="start">
+                  </ion-checkbox>
+                </ion-item>
+                <ion-button type="submit" [disabled]="!sign_in_form.valid" class="i-button" expand="block"
+                  shape="round">
+                  <ion-label>{{'Login' | translate}}</ion-label>
+                </ion-button>
+              </form>
+              <!-- <ion-grid class="i-other-sign-up-grid" fixed>
+                <ion-row>
+                  <ion-fab-button class="i-other-sign-up-fab" color="light">
+                    <ion-icon [style.fill]="themeService.dark" class="i-other-sign-up-fab-img"
+                      src="assets/icon/logo-facebook.svg"></ion-icon>
+                  </ion-fab-button>
+                  <ion-fab-button class="i-other-sign-up-fab" color="light">
+                    <ion-icon [style.fill]="themeService.dark" class="i-other-sign-up-fab-img"
+                      src="assets/icon/logo-google.svg"></ion-icon>
+                  </ion-fab-button>
+                </ion-row>
+              </ion-grid> -->
+            </ion-grid>
+          </ion-grid>
+        </ion-content>
+      </super-tab>
+      <super-tab>
+        <ion-content color="medium">
+          <!-- Sign UP -->
+          <ion-grid fixed class="i-gird-all  ion-padding ">
+            <img class="login-content-img" src="./assets/icon/favicon.png">
+            <ion-grid class="i-grid">
+              <!-- FORM VALIDATION -->
+              <form [formGroup]="sign_up_form" (ngSubmit)="attemptSignUp(sign_up_form.value)">
+                <ion-item class="i-input" color="light" lines="none">
+                  <ion-icon [style.fill]="themeService.dark" slot="start" src="assets/icon/person.svg"></ion-icon>
+                  <ion-input formControlName="userName" class="ion-no-padding" type="text"
+                    placeholder="{{'name' | translate}}" required></ion-input>
+                </ion-item>
+                <div class="validation-errors">
+                  <ng-container *ngFor="let validation of validation_messages.userName">
+                    <div class="error-message"
+                      *ngIf="sign_up_form.get('userName').hasError(validation.type) && (sign_up_form.get('userName').dirty || sign_up_form.get('userName').touched)">
+                      <ion-icon name="information-circle-outline"></ion-icon> {{ validation.message }}
+                    </div>
+                  </ng-container>
+                </div>
+
+                <ion-item class="i-input" color="light" lines="none">
+                  <ion-icon [style.fill]="themeService.dark" slot="start" src="assets/icon/mail.svg"></ion-icon>
+                  <ion-input formControlName="userEmail" class="ion-no-padding" type="email"
+                    placeholder="{{'email' | translate}}" required></ion-input>
+                </ion-item>
+
+                <div class="validation-errors">
+                  <ng-container *ngFor="let validation of validation_messages.userEmail">
+                    <div class="error-message"
+                      *ngIf="sign_up_form.get('userEmail').hasError(validation.type) && (sign_up_form.get('userEmail').dirty || sign_up_form.get('userEmail').touched)">
+                      <ion-icon name="information-circle-outline"></ion-icon> {{ validation.message }}
+                    </div>
+                  </ng-container>
+                </div>
+
+                <div formGroupName="matching_passwords">
+                  <ion-item class="i-input" color="light" lines="none">
+                    <ion-icon [style.fill]="themeService.dark" slot="start" src="assets/icon/lock.svg"></ion-icon>
+                    <ion-input class="ion-no-padding" formControlName="userPassword"
+                      [type]="signUpPasswordBoolean ? 'password' : 'text'" placeholder="{{ 'password' | translate }}">
+                    </ion-input>
+                    <ion-icon slot="end"
+                      [src]="signUpPasswordBoolean ? 'assets/icon/eye.svg' : 'assets/icon/eye-off.svg'"
+                      (click)="showHidePassword('signUpPassword')"></ion-icon>
+                  </ion-item>
+
+                  <div class="validation-errors">
+                    <ng-container *ngFor="let validation of validation_messages.userPassword">
+                      <div class="error-message"
+                        *ngIf="sign_up_form.get('matching_passwords').get('userPassword').hasError(validation.type) && (sign_up_form.get('matching_passwords').get('userPassword').dirty || sign_up_form.get('matching_passwords').get('userPassword').touched)">
+                        <ion-icon name="information-circle-outline"></ion-icon>{{ validation.message }}
+                        <!-- <p *ngIf="expression"> {{ validation.message }}</p> -->
+                      </div>
+                    </ng-container>
+                  </div>
+                  <ion-item class="i-input" color="light" lines="none">
+                    <ion-icon [style.fill]="themeService.dark" slot="start" src="assets/icon/lock.svg"></ion-icon>
+                    <ion-input class="ion-no-padding" formControlName="userCPassword"
+                      [type]="signUpCPasswordBoolean ? 'password' : 'text'"
+                      placeholder="{{'confirm password' | translate}}" required></ion-input>
+                    <ion-icon slot="end"
+                      [src]="signUpCPasswordBoolean ? 'assets/icon/eye.svg' : 'assets/icon/eye-off.svg'"
+                      (click)="showHidePassword('signUpConfirmPassword')"></ion-icon>
+                  </ion-item>
+
+                  <div class="validation-errors">
+                    <ng-container *ngFor="let validation of validation_messages.userCPassword">
+                      <div class="error-message"
+                        *ngIf="sign_up_form.get('matching_passwords').get('userCPassword').hasError(validation.type) && (sign_up_form.get('matching_passwords').get('userCPassword').dirty || sign_up_form.get('matching_passwords').get('userCPassword').touched)">
+                        <ion-icon name="information-circle-outline"></ion-icon> {{ validation.message }}
+                      </div>
+                    </ng-container>
+                  </div>
+                  <div class="validation-errors">
+                    <ng-container *ngFor="let validation of validation_messages.matching_passwords">
+                      <div class="error-message"
+                        *ngIf="sign_up_form.get('matching_passwords').hasError(validation.type) && (sign_up_form.get('matching_passwords').get('userCPassword').dirty || sign_up_form.get('matching_passwords').get('userCPassword').touched)">
+                        <ion-icon name="information-circle-outline"></ion-icon> {{ validation.message }}
+                      </div>
+                    </ng-container>
+                  </div>
+                </div>
+                <!-- PASSWORD FORM MATCH -->
+
+
+                <ion-item class="i-input" color="light" lines="none">
+                  <ion-icon [style.fill]="themeService.dark" slot="start" src="assets/icon/phone.svg"></ion-icon>
+                  <ion-input type='tel' formControlName="userPhoneNo" class="ion-no-padding" placeholder="0300xxxxxxx"
+                    maxlength='11'>
+                  </ion-input>
+                </ion-item>
+                <div class="validation-errors">
+                  <ng-container *ngFor="let validation of validation_messages.userPhoneNo">
+                    <div class="error-message"
+                      *ngIf="sign_up_form.get('userPhoneNo').hasError(validation.type) && (sign_up_form.get('userPhoneNo').dirty || sign_up_form.get('userPhoneNo').touched)">
+                      <ion-icon name="information-circle-outline"></ion-icon> {{ validation.message }}
+                    </div>
+                  </ng-container>
+                </div>
+                <ion-item class="i-input" color="light" lines="none">
+                  <ion-label color="primary">Location</ion-label>
+                  <ion-icon slot="start" src="assets/icon/location.svg"></ion-icon>
+                  <ion-select interface="popover" formControlName="userBaseLocation">
+                    <ion-select-option style="max-width: 100% !important; white-space:normal !important;"
+                      *ngFor="let base_location of baseLocations" [value]="base_location">{{base_location}}
+                    </ion-select-option>
+                  </ion-select>
+                </ion-item>
+
+                <ion-item color="transparent" class="i-remember-checkbox" lines="none">
+                  <ion-label>I accept terms and conditions</ion-label>
+                  <ion-checkbox class="i-checkbox" slot="start" formControlName="terms"></ion-checkbox>
+                </ion-item>
+                <div class="validation-errors">
+                  <ng-container *ngFor="let validation of validation_messages.terms">
+                    <div class="error-message"
+                      *ngIf="sign_up_form.get('terms').hasError(validation.type) && (sign_up_form.get('terms').dirty || sign_up_form.get('terms').touched)">
+                      <ion-icon name="information-circle-outline"></ion-icon> {{ validation.message }}
+                    </div>
+                  </ng-container>
+                </div>
+
+                <ion-button type="submit" [disabled]="!sign_up_form.valid" class="i-button" expand="block"
+                  shape="round">
+                  <ion-label>{{'Sign Up' | translate}}</ion-label>
+                </ion-button>
+              </form>
+            </ion-grid>
+          </ion-grid>
+
+        </ion-content>
+      </super-tab>
+    </super-tabs-container>
+  </super-tabs>
+</ion-content>

@@ -1,0 +1,24 @@
+.i-grid {
+ 
+    background: var(--ion-color-light);
+    height         : 100%;
+    width          : 100%;
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+    .i-img {
+        margin-top: 15px;
+        height    : 50px;
+        width     : 50px;
+        fill: var(--ion-color-primary);
+    }
+
+    .i-label {
+        margin-top   : 10px;
+        // margin-bottom: 15px;
+        color: var(--ion-color-primary);
+        font-size: 15px;
+    }
+
+
+}

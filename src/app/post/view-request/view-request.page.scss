@@ -1,0 +1,33 @@
+ion-content {
+    --background: var(--ion-color-medium);
+}
+
+ion-card,
+ion-item {
+    --background: var(--ion-color-light);
+}
+
+.i-button {
+    border-radius: 25px;
+    text-align   : center;
+    margin   : 10px;
+    margin-bottom: 10px;
+    height       : 48px;
+    
+}
+
+
+.i-icon {
+    fill: var(--ion-color-dark);
+}
+
+p {
+    color : var(--ion-color-dark);
+    margin-bottom: 2px;
+}
+
+h3 {
+    opacity   : 0.5;
+    font-size : 14px;
+    margin-top: 2px;
+}

@@ -1,0 +1,66 @@
+.i-content-main {
+    .i-card-main {
+        .i-icon-heart {
+            position: absolute;
+            top     : 7px;
+            right   : 8px;
+            height  : 24px;
+            width   : 24px;
+            fill    : var(--ion-color-danger);
+        }
+
+        .i-avatar {
+            height: 60px;
+            width : 60px;
+
+            .i-avatar-profile {
+                height          : 60px;
+                width           : 60px;
+                margin          : auto;
+                position        : absolute;
+                background-color: var(--ion-color-primary);
+
+                .i-icon-profile {
+                    left    : 0;
+                    right   : 0;
+                    bottom  : 0;
+                    top     : 0;
+                    height  : 45px;
+                    width   : 45px;
+                    margin  : auto;
+                    position: absolute;
+                    fill    : var(--ion-color-light);
+                }
+
+                .i-avatar-profile-d {
+                    left    : 0;
+                    right   : 0;
+                    bottom  : 0;
+                    top     : 0;
+                    height  : 45px;
+                    width   : 45px;
+                    margin  : auto;
+                    position: absolute;
+
+                }
+            }
+        }
+
+
+
+        .i-label {
+            margin-left: 20px;
+
+            .heading-name {
+                font-weight: 700;
+                font-size  : 20px;
+            }
+
+            .p-service {
+                font-size: 17px;
+                color: var(--ion-color-dark);
+                opacity: .5;
+            }
+        }
+    }
+}

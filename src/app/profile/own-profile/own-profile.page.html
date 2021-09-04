@@ -1,0 +1,210 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-menu-button slot="start">
+      <ion-icon src='assets/icon/menu.svg'></ion-icon>
+    </ion-menu-button>
+    <ion-title>{{'Profile' | translate }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="i-content-main">
+  <ion-grid class="i-grid-top ion-no-padding" fixed>
+    <ion-card class="ion-padding i-card-top">
+      <ion-item lines="none" class="i-item-heart">
+        <ion-label>{{authService.userIsFavouriteBy.length}}</ion-label>
+        <ion-icon slot="end" src="assets/icon/heart.svg"></ion-icon>
+      </ion-item>
+      <!-- <ion-button >
+          <ion-icon slot="start" name="add"></ion-icon>
+          Click me
+        </ion-button> -->
+      <ion-grid fixed class="i-grid-user-profile">
+        <ion-row class="ion-justify-content-center ion-align-items-center" style="height: 100%">
+          <ion-avatar class="i-avatar-profile">
+            <ion-spinner *ngIf="spinnerBoolean == true" class="i-spinner" color="primary" name="lines"></ion-spinner>
+            <ion-avatar *ngIf="this.fireAuth.auth.currentUser == null ||
+            authService.userProfileImg == ''" class="i-avatar-profile-d" [style.background-color]="themeService.light"
+              [style.border-color]="themeService.primary">
+              <ion-icon class="i-icon-profile-d" [style.fill]="themeService.primary" src="assets/icon/person.svg">
+              </ion-icon>
+            </ion-avatar>
+            <img *ngIf="this.fireAuth.auth.currentUser != null && authService.userProfileImg != ''"
+              class="i-img-profile" src="{{  authService.userProfileImg }}"
+              (click)="previewImage(authService.userProfileImg)" />
+            <ion-avatar class="i-avatar-click" [style.background-color]="themeService.light"
+              [style.border-color]="themeService.primary" (click)="userProfilePicture()">
+              <ion-icon class="i-icon-avatar-click" [style.fill]="themeService.primary" src="assets/icon/camera.svg">
+              </ion-icon>
+            </ion-avatar>
+          </ion-avatar>
+        </ion-row>
+      </ion-grid>
+      <ion-item class="ion-text-center" lines="full">
+        <!-- <ion-icon slot="end" name="create" (click)="editUser(authService.currentUserName, 'User Name', 'userName')"></ion-icon> -->
+        <ion-label style="font-size: 30px;">{{authService.currentUserName}}</ion-label>
+        <!-- <ion-icon slot="start"></ion-icon> -->
+      </ion-item>
+      <ion-item *ngIf="authService.currentUserDescription != ''" lines="full">
+        <div>
+          <p>Description</p>
+          <p>{{ authService.currentUserDescription }}</p>
+        </div>
+      </ion-item>
+
+      <!-- posts and orders grid -->
+      <ion-grid fixed class="i-grid-order ion-no-padding">
+        <ion-row class="ion-no-padding">
+          <ion-col class="ion-no-padding">
+            <ion-item class="ion-text-center" lines="none">
+              <ion-label>
+                <ion-icon [style.fill]="themeService.dark" class="i-order-icon" src="assets/icon/orders.svg">
+                </ion-icon>
+                <h1 class="i-order-heading">00.00</h1>
+                <p class="i-order-p">Orders</p>
+              </ion-label>
+            </ion-item>
+          </ion-col>
+          <ion-col class="ion-no-padding">
+            <ion-item class="ion-text-center ion-no-padding" lines="none">
+              <ion-label class="ion-no-padding">
+                <ion-icon [style.fill]="themeService.dark" class="i-order-icon" src="assets/icon/posts.svg">
+                </ion-icon>
+                <h1 class="i-order-heading"><b>{{authService.currentUserPosts.length | number: '1.1-1'}}</b></h1>
+                <p class="i-order-p">Posts</p>
+              </ion-label>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card>
+    <ion-grid class="i-grid-info ion-no-padding">
+      <ion-card class="i-card-info ion-padding">
+        <ion-list class="ion-no-padding" lines="full">
+          <ion-item>
+            <ion-icon class="i-icon ion-no-padding" slot="start" src="assets/icon/mail.svg">
+            </ion-icon>
+            <ion-label>
+              <p style="font-size: 12px;">Email</p>
+              <h3>{{authService.currentUserEmail}}</h3>
+            </ion-label>
+            <!-- <ion-icon slot="end" name="create"></ion-icon> -->
+          </ion-item>
+          <ion-item>
+            <ion-icon class="i-icon ion-no-padding" slot="start" src="assets/icon/phone.svg"></ion-icon>
+            <ion-label>
+              <p style="font-size: 12px;">Phone No</p>
+              <h3>{{authService.currentUserPhoneNo}}</h3>
+            </ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-icon class="i-icon ion-no-padding" slot="start" src="assets/icon/location.svg"></ion-icon>
+            <ion-label>
+              <p style="font-size: 12px;">Base Location</p>
+              <h3>{{authService.currentUserBaseLocation}}</h3>
+            </ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-icon class="i-icon ion-no-padding" slot="start" src="assets/icon/joined-at.svg"></ion-icon>
+            <ion-label>
+              <p style="font-size: 12px;">Joined Date</p>
+              <h3>{{authService.currentUserDateCreated | date:'dd MMMM yyyy'}}</h3>
+            </ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-card>
+      <ion-card>
+        <ion-list class="ion-no-padding" lines="none">
+          <ion-item>
+            <ion-label>Review {{ 0 }}</ion-label>
+            <ion-icon class="i-icon-review" slot="end" color="danger" name="star"></ion-icon>
+            <ion-icon class="i-icon-review" slot="end" color="danger" name="star"></ion-icon>
+            <ion-icon class="i-icon-review" slot="end" color="danger" name="star"></ion-icon>
+            <ion-icon class="i-icon-review" slot="end" color="danger" name="star"></ion-icon>
+            <ion-icon class="i-icon-review" slot="end" color="danger" name="star"></ion-icon>
+
+          </ion-item>
+        </ion-list>
+      </ion-card>
+      <ion-card *ngIf="authService.currentUserType == 'Employee'" class="ion-padding i-card-become-sp">
+        <ion-list class="ion-no-padding" lines="full">
+          <ion-item>
+            <ion-icon class="i-icon" slot="start" src="assets/icon/person.svg">
+            </ion-icon>
+            <ion-label>
+              <p style="font-size: 12px;">User Type</p>
+              <h3>{{authService.currentUserType}}</h3>
+            </ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-icon class="i-icon" slot="start" src="assets/icon/services.svg">
+            </ion-icon>
+            <ion-label>
+              <p style="font-size: 12px;">Your Service</p>
+              <h3>{{authService.currentUserService}}</h3>
+            </ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-icon class="i-icon" slot="start" src="assets/icon/certification.svg">
+            </ion-icon>
+            <ion-label>
+              <p style="font-size: 12px;">Certification From</p>
+              <h3>{{authService.currentUserCertificationFrom}}</h3>
+            </ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-icon class="i-icon" slot="start" src="assets/icon/joined-at.svg">
+            </ion-icon>
+            <ion-label>
+              <p style="font-size: 12px;">Joined as service provide</p>
+              <h3>{{authService.currentUserSPDate | date:'dd MMMM yyyy'}}</h3>
+            </ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-icon class="i-icon" slot="start" src="assets/icon/experience.svg"></ion-icon>
+            <ion-label>
+              <p style="font-size: 12px;">Experience</p>
+              <h3>{{authService.currentUserExperience}}</h3>
+            </ion-label>
+          </ion-item>
+
+          <ion-item class="i-item-skill-header" lines='none'>
+            <ion-label>Skill</ion-label>
+            <ion-icon class="i-icon i-icon-skill-header" slot="start" src='assets/icon/list.svg'></ion-icon>
+          </ion-item>
+
+          <ion-item class="i-item-skill-list" lines='noun'>
+            <ion-row class="i-row-skill">
+              <ion-item class="i-item-skill" *ngFor="let skill of authService.currentUserSkills" lines='none'>
+                <ion-label class="i-label-skill">
+                  {{ skill }} </ion-label>
+              </ion-item>
+            </ion-row>
+          </ion-item>
+        </ion-list>
+
+      </ion-card>
+
+    </ion-grid>
+  </ion-grid>
+
+
+
+</ion-content>
+
+<ion-fab horizontal="end" vertical="bottom" size='small'>
+  <ion-list class="i-fab-list">
+
+    <ion-item [disabled]="fabClicked" (click)="editProfile()" class="i-item">
+      <ion-icon class="i-icon-fab" slot="end" src='assets/icon/edit.svg'></ion-icon>
+      <ion-label class="i-label-fab">Edit Profile</ion-label>
+    </ion-item>
+    <ion-item (click)="signOut()" class="i-item">
+      <ion-icon class="i-icon-fab" slot="end" src='assets/icon/sign-out.svg'></ion-icon>
+      <ion-label class="i-label-fab">Sign out</ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-fab-button (click)="fabClick()">
+    <ion-icon [src]="fabClicked ? 'assets/icon/opt.svg' : 'assets/icon/close.svg'"></ion-icon>
+  </ion-fab-button>
+</ion-fab>

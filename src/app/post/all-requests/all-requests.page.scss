@@ -1,0 +1,42 @@
+.i-card-post {
+    padding: 5px;
+
+    .i-label-detail {
+        margin: 0px;
+
+        .i-heading-title {
+            font-weight: 700;
+            font-size  : 18px;
+            font-weight: 700;
+            color      : var(--ion-color-dark);
+            }
+            p {
+                color      : var(--ion-color-dark);
+                opacity: 0.5;
+            }
+    }
+
+
+    .i-heading-price {
+        font-weight: 700;
+        color      : var(--ion-color-dark);
+        font-size  : 18px;
+        text-align : right;
+    }
+
+    .i-p-time {
+        text-align: right;
+        color     : var(--ion-color-dark);
+        opacity: .5;
+    }
+
+}
+// }
+
+.i-text {
+color: var(--ion-color-primary);
+// opacity: .5;
+}
+.i-icon{
+color: var(--ion-color-dark);
+}

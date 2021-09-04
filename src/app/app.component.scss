@@ -1,0 +1,61 @@
+.i-avatar {
+    height  : 40px;
+    width   : 40px;
+    position: relative;
+
+    .i-avatar-profile {
+
+        left    : 0;
+        right   : 0;
+        bottom  : 0;
+        top     : 0;
+        height  : 40px;
+        width   : 40px;
+        margin  : auto;
+        position: absolute;
+
+        .i-icon-profile {
+            left    : 0;
+            right   : 0;
+            bottom  : 0;
+            top     : 0;
+            height  : 30px;
+            width   : 30px;
+            margin  : auto;
+            position: absolute;
+
+        }
+
+        .i-avatar-profile-d {
+            left    : 0;
+            right   : 0;
+            bottom  : 0;
+            top     : 0;
+            height  : 30px;
+            width   : 30px;
+            margin  : auto;
+            position: absolute;
+
+        }
+    }
+}
+.i-icon{
+    fill: var(--ion-color-dark);
+}
+// .i-avatar-profile {
+//     height  : 40px;
+//     width   : 40px;
+//     position: relative;
+
+//     .i-icon-profile {
+//         left    : 0;
+//         right   : 0;
+//         bottom  : 0;
+//         top     : 0;
+//         height  : 30px;
+//         width   : 30px;
+//         margin  : auto;
+//         position: absolute;
+        
+//     }
+// }

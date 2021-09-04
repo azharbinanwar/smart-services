@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar  color="primary">
+    <ion-buttons slot="start">
+      <ion-button (click)="dismissLanguage()">
+        <ion-icon slot="icon-only" name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>{{'Language' | translate}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content  color="medium">
+  <ion-card class="ion-padding i-cart-language"  color="light">
+    <ion-list *ngFor="let language of settingsConfigService.languagesList" lines="full" class="ion-no-padding">
+      <ion-item (click)="selectLanguage(language.code)" color="light">
+        <ion-label>{{ language.name | translate }}</ion-label>
+        <ion-icon slot="start" [src]="language.image"></ion-icon>
+        <ion-checkbox slot="end" [checked]="language.code === settingsConfigService.selectedLanguage.code"></ion-checkbox>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+</ion-content>
